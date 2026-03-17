@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c59f59",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1e1a14",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif"],
+                        "sans": ["Noto Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header
+                class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+                <div class="mx-auto flex max-w-7xl items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <a href="home.html" class="block h-10">
+                            <img src="../images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
+                        </a>
+                        <h2 class="font-display text-xl font-bold tracking-widest text-primary uppercase">Velvet</h2>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-10">
+                        <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                            href="home.html">Home</a>
+                        <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                            href="our-collection.html">Chocolates</a>
+                        <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                            href="our-collection.html">Shop</a>
+                        <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                            href="our-story.html">Our Story</a>
+                        <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                            href="contact-us.html">Contact</a>
+                    </nav>
+                    <div class="flex items-center gap-4">
+                        <a href="checkout.html"
+                            class="flex items-center justify-center rounded bg-primary/10 p-2 text-primary hover:bg-primary hover:text-background-dark transition-all">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                        </a>
+                        <a href="my-account.html"
+                            class="h-8 w-8 rounded-full bg-primary/20 border border-primary/30 overflow-hidden">
+                            <img class="h-full w-full object-cover" data-alt="Portrait of a person profile"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyEktfGtFaxoReKL0kH6uTswf6LVP-WP-dyqHXOSOOT7iwwR02FpWbaQm0-C6HKeGTpN9x6NFlxIqJsvQPgVwtyXqm3SnxGuPlwINsxL4HBK_7YjmLIGh3wRlQq7bdXvDypwdgV8CBTG3AaUSnEQCSFAw2dz2duib4-ruipw7C-ixVf_adoRVGDZkYgP3t6-ZOBiGzDE1XBDbTlRe4XGsD2M4AlRayK-MJ0aOnc3wHlyMvfw3fYcheWpVSpU4ONyayIrxE1AUayT8" />
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-1 max-w-5xl mx-auto w-full px-6 py-10">
+                <!-- Profile Greeting Section -->
+                <section class="flex flex-col items-center mb-12 text-center pt-20">
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 mb-4 ring-4 ring-primary/20"
+                        data-alt="Close up portrait of a smiling man"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAiYrxvb0EgxYjf793p7i7_OnNPHa4YrPaqGsYjR6Fv3CWibEjaM92iq2zqizaZfYaBdpFO6esQc2ugqe4UGyeW301B6JH-ihxzlmRaPZtK8UieHt-m6m1NG3MOijD8-NKRDQXGSboXiWSsqlLeHK9MA32034hfaorLC65DcWf9BNfJB4fjcb3snW49duzRtaBZVa_ox6iNcNAas5qtrBF6naql5Fnt858tNSCFchvdGvjvVQPl03GCmk0MdvBl4PipNWMh2Ls4xbc");'>
+                    </div>
+                    <h1 class="font-display text-3xl font-bold mb-1">Welcome back, </h1>
+                    <p class="text-slate-500 dark:text-slate-400">v@example.com</p>
+                    <div
+                        class="mt-4 px-4 py-1 rounded-full bg-primary/10 border border-primary/30 inline-flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-primary">verified_user</span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary">Premium Member since
+                            2023</span>
+                    </div>
+                </section>
+                <!-- Navigation Tabs -->
+                <div class="flex border-b border-primary/20 mb-8 overflow-x-auto no-scrollbar">
+                    <button
+                        class="px-6 py-3 border-b-2 border-primary text-primary font-bold whitespace-nowrap">Overview</button>
+                    <button
+                        class="px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors whitespace-nowrap">Order
+                        History</button>
+                    <button
+                        class="px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors whitespace-nowrap">Saved
+                        Favourites</button>
+                    <button
+                        class="px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors whitespace-nowrap">Settings</button>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Left Side: Main Content -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <!-- Order Again Nudge -->
+                        <div class="bg-primary/5 rounded-xl p-6 border border-primary/20">
+                            <h3 class="font-display text-xl font-bold mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">replay</span>
+                                Order Again
+                            </h3>
+                            <div class="flex flex-col sm:flex-row gap-6 items-center">
+                                <div class="w-full sm:w-48 h-32 bg-center bg-no-repeat bg-cover rounded-lg"
+                                    data-alt="Dark Sea Salt Truffles with gold dust"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5y7H7ZBuvHwAo2M-pzm_6WiO0QKAn6uPsdCKKxIJRRPbNRErstUSlekaoay3pQ7D1t8lKNewDikeiY3Dj-saECuRDlwzg5QMojNTAKCRALh3Y3tkzTHmVx1FznEb0c7_l-lULkLsON3I5CgN3h8smbMT2fntJt_WWObzamVZPXLZN0NypY8ELf95iFm_88aGrBSzRSvW-_wIZf3l88LcoABls5GDGyOvIv_kfTp58mLwdwqqTgjgKgf8DXcnh6ufCKUqUyiihZBw");'>
+                                </div>
+                                <div class="flex-1 text-center sm:text-left">
+                                    <h4 class="text-lg font-bold mb-1">Dark Sea Salt Truffles</h4>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">You last indulged in
+                                        these 2 weeks ago.</p>
+                                    <button
+                                        class="bg-primary text-background-dark px-6 py-2 rounded-lg font-bold hover:opacity-90 transition-opacity inline-flex items-center gap-2 add-to-cart">
+                                        <span class="material-symbols-outlined text-sm">shopping_cart</span>
+                                        Add to Cart — $32.00
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Account Overview Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div
+                                class="p-5 bg-background-light dark:bg-slate-800/40 rounded-xl border border-primary/10">
+                                <span class="material-symbols-outlined text-primary mb-3">location_on</span>
+                                <h4 class="font-bold mb-2">Default Shipping</h4>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                                    742 Evergreen Terrace<br />
+                                    Springfield, OR 97403<br />
+                                    United States
+                                </p>
+                                <button
+                                    class="mt-4 text-xs font-bold text-primary uppercase tracking-wider hover:underline">Edit
+                                    Address</button>
+                            </div>
+                            <div
+                                class="p-5 bg-background-light dark:bg-slate-800/40 rounded-xl border border-primary/10">
+                                <span class="material-symbols-outlined text-primary mb-3">credit_card</span>
+                                <h4 class="font-bold mb-2">Payment Method</h4>
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-6 bg-slate-700 rounded flex items-center justify-center text-[10px] font-bold">
+                                        VISA</div>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">Ending in 4242</p>
+                                </div>
+                                <p class="text-xs text-slate-500 mt-1">Expires 12/26</p>
+                                <button
+                                    class="mt-4 text-xs font-bold text-primary uppercase tracking-wider hover:underline">Update
+                                    Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Side: Sidebar Stats/Favorites -->
+                    <div class="space-y-6">
+                        <div class="bg-background-light dark:bg-slate-800/40 rounded-xl p-6 border border-primary/10">
+                            <h4 class="font-display font-bold mb-4">Account Stats</h4>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-slate-500">Total Orders</span>
+                                    <span class="font-bold">24</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-slate-500">Loyalty Points</span>
+                                    <span class="font-bold text-primary">1,250</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-slate-500">Next Reward</span>
+                                    <span class="text-xs px-2 py-0.5 rounded bg-primary/20 text-primary">15% Off</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-background-light dark:bg-slate-800/40 rounded-xl p-6 border border-primary/10">
+                            <h4 class="font-display font-bold mb-4">Quick Settings</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a class="flex items-center gap-3 text-sm text-slate-500 hover:text-primary transition-colors"
+                                        href="#">
+                                        <span class="material-symbols-outlined text-sm">lock</span>
+                                        Security &amp; Password
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="flex items-center gap-3 text-sm text-slate-500 hover:text-primary transition-colors"
+                                        href="#">
+                                        <span class="material-symbols-outlined text-sm">mail</span>
+                                        Email Preferences
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="flex items-center gap-3 text-sm text-slate-500 hover:text-primary transition-colors text-red-400"
+                                        href="#">
+                                        <span class="material-symbols-outlined text-sm">logout</span>
+                                        Sign Out
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Saved Favorites Preview -->
+                <section class="mt-16">
+                    <div class="flex justify-between items-end mb-6">
+                        <h2 class="font-display text-2xl font-bold">Your Favourites</h2>
+                        <a class="text-primary text-sm font-bold hover:underline" href="#">View All</a>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="group cursor-pointer">
+                            <div class="aspect-square bg-center bg-cover rounded-xl mb-3 overflow-hidden"
+                                data-alt="Selection of ruby chocolates"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATEMG2rcOjc8veXMz9ylVEeZShg2spyJ5jR64ur-b3yilXS8qfBdPO4x0luxCcBdJwR__-7Q-G5kbCrvHucpksQKsUrTikQLm8itQvYL0UF_qCbnSh83LZPTokw418a5mYn8i8Rkn93LDS0ILUZn8XRO-rUstTDQq-FDrxdq5nXCxXUYDJXPQSustJHat4C0iZ9KvHDTV-5Z2zmHq4x6efHQ4pX18K76R2fYMHLQbY7PxZ3bU45hUGDrqj16bfkKkrkwPmmnn_Gn4");'>
+                                <div
+                                    class="w-full h-full bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white">favorite</span>
+                                </div>
+                            </div>
+                            <p class="font-bold text-sm">Ruby Rose Collection</p>
+                            <p class="text-primary text-xs font-medium">$45.00</p>
+                        </div>
+                        <div class="group cursor-pointer">
+                            <div class="aspect-square bg-center bg-cover rounded-xl mb-3 overflow-hidden"
+                                data-alt="Milk chocolate hazelnut pralines"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQFCqbyZGptnzRYwHELH8rTek6wCq-ts3GOFdXIRvyOuKVLA4VBfvXGRxMGQRqnzR1MQtID5ot1OIkXWKGrqaOXYtggwuQrfBeBfnBIZtydy_wfbdwJyunUrJRIAgo4xhzsRlFJP0fXBHDa2TDY6Swa2Z9nD-CYmXrSlACXEi0xWoK29Q_mUL47uG_BITprr5rQDTfZJt2z84sQQ5AAIXOjycsgs-kva1965tqbSQS2pKFy8XwErhJilrPx5S_uQqQCyfTG0CxJ5U");'>
+                                <div
+                                    class="w-full h-full bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white">favorite</span>
+                                </div>
+                            </div>
+                            <p class="font-bold text-sm">Hazelnut Pralines</p>
+                            <p class="text-primary text-xs font-medium">$28.00</p>
+                        </div>
+                        <div class="group cursor-pointer">
+                            <div class="aspect-square bg-center bg-cover rounded-xl mb-3 overflow-hidden"
+                                data-alt="Artisanal chocolate bars"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbgD4_KmVRzegQyOnyc7-nF7ZxB3bIiuBIYbXRkTQux1yikbGmY1kPsVTwkaMZxmLvdN_hzo0HoCrZFK2EnljjfSvlmBC7VQpXCjD5iunOlAwKqsJeYTuyR3V9bgEp4Gqg_eZZVXfnXJ7U22pNXbh6Uqrw_uzbcdy3DTELA95YaPzcUZzQz40e2q5YgFc0niho86k-tCbscrkAYGF0NQEdjP1uUMF8guN-TQjXYHLcQ_Nfpda9u_fp-ralqah7FrfUOhOqSJCrkAc");'>
+                                <div
+                                    class="w-full h-full bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white">favorite</span>
+                                </div>
+                            </div>
+                            <p class="font-bold text-sm">Origin Bar Flight</p>
+                            <p class="text-primary text-xs font-medium">$38.00</p>
+                        </div>
+                        <div class="group cursor-pointer">
+                            <div class="aspect-square bg-center bg-cover rounded-xl mb-3 overflow-hidden"
+                                data-alt="Assorted gourmet bonbons"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHxYjTAKdWcditzkUKkBr0XNpQfq0EXul5iuWCWgVSDAlduY1SPkiwO3Lk1EzSRYdiT6JFyECL4OoBdWJgOYzkxqiNCsyM2K_favmbFTjgEsm31JooUPNsuYzMrIb5cN6EoSf_c1OVE8JiH3d7Iul4jiXSyrlzjnNEmcFNhU0v23xkJi1FR0EmJeCGSUGnPLeY_hzbG2PIsRk1PV_KJwl4XVX7Reb5PpHwUMQK4euihN57aGq-VMcHlmSUb4_-3yDkBS46q2SJ3m8");'>
+                                <div
+                                    class="w-full h-full bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white">favorite</span>
+                                </div>
+                            </div>
+                            <p class="font-bold text-sm">Midnight Bonbons</p>
+                            <p class="text-primary text-xs font-medium">$52.00</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!-- Footer -->
+            <footer class="border-t border-primary/10 mt-20 py-10 px-6 bg-background-light dark:bg-background-dark/50">
+                <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex items-center gap-2 text-primary opacity-60">
+                        <a href="home.html" class="block h-10">
+                            <img src="../images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
+                        </a>
+                        <span class="font-display font-bold">Velvet Chocolates</span>
+                    </div>
+                    <div class="flex gap-8 text-sm text-slate-500">
+                        <a class="hover:text-primary" href="#">Help Center</a>
+                        <a class="hover:text-primary" href="privacy-policy.html">Privacy Policy</a>
+                        <a class="hover:text-primary" href="#">Terms of Service</a>
+                    </div>
+                    <p class="text-xs text-slate-500">© 2024 Velvet Chocolates. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const toast = document.createElement('div');
+                toast.className = 'fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-[#1E1A14] border border-[#C59F59] text-[#C59F59] px-8 py-4 rounded-xl shadow-2xl font-bold text-center transition-all duration-500 opacity-0 transform translate-y-4';
+                toast.textContent = 'Added to Box!';
+                document.body.appendChild(toast);
+
+                requestAnimationFrame(() => {
+                    toast.style.opacity = '1';
+                    toast.style.transform = 'translate(-50%, 0)';
+                });
+
+                setTimeout(() => {
+                    window.location.href = 'checkout.html';
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

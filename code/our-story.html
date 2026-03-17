@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#c59f59",
+              "background-light": "#f8f7f6",
+              "background-dark": "#1e1a14",
+            },
+            fontFamily: {
+              "display": ["Noto Serif"],
+              "sans": ["Noto Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<    <style>
+        @keyframes shiny {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        .shiny-text {
+            background: linear-gradient(90deg, #c59f59 0%, #fff 50%, #c59f59 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shiny 3s linear infinite;
+        }
+        .logo-shiny {
+            filter: drop-shadow(0 0 5px rgba(197, 159, 89, 0.5));
+        }
+    </style>
+    <title>Our Story | Velvet Chocolates</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden pt-20">
+        <!-- Navigation -->
+        <header
+            class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+            <div class="mx-auto flex max-w-7xl items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="home.html" class="block h-10">
+                        <img src="../images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
+                    </a>
+                    <h2 class="font-display text-xl font-bold tracking-widest text-primary uppercase">Velvet</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                        href="home.html">Home</a>
+                    <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                        href="our-collection.html">Chocolates</a>
+                    <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                        href="our-collection.html">Shop</a>
+                    <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                        href="our-story.html">Our Story</a>
+                    <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                        href="contact-us.html">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="checkout.html"
+                        class="flex items-center justify-center rounded bg-primary/10 p-2 text-primary hover:bg-primary hover:text-background-dark transition-all">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                    </a>
+                    <a href="my-account.html"
+                        class="h-8 w-8 rounded-full bg-primary/20 border border-primary/30 overflow-hidden">
+                        <img class="h-full w-full object-cover" data-alt="Portrait of a person profile"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyEktfGtFaxoReKL0kH6uTswf6LVP-WP-dyqHXOSOOT7iwwR02FpWbaQm0-C6HKeGTpN9x6NFlxIqJsvQPgVwtyXqm3SnxGuPlwINsxL4HBK_7YjmLIGh3wRlQq7bdXvDypwdgV8CBTG3AaUSnEQCSFAw2dz2duib4-ruipw7C-ixVf_adoRVGDZkYgP3t6-ZOBiGzDE1XBDbTlRe4XGsD2M4AlRayK-MJ0aOnc3wHlyMvfw3fYcheWpVSpU4ONyayIrxE1AUayT8" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Page 1 Hero -->
+            <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+                <span class="text-primary font-medium tracking-widest uppercase text-xs mb-4 block">EST. 2024 · GAYA,
+                    BIHAR · INDIA</span>
+                <h1 class="text-6xl md:text-8xl font-display font-bold text-white mb-6">Our Story</h1>
+                <p class="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto italic">"We didn’t come to sell chocolate.
+                    We came to say the things you couldn’t."</p>
+            </section>
+
+            <!-- Page 1 Points -->
+            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div
+                        class="bg-primary/5 border border-primary/10 p-8 rounded-2xl hover:border-primary/40 transition-all duration-300">
+                        <span class="text-4xl font-display text-primary opacity-30 block mb-4">01</span>
+                        <h3 class="text-xl font-bold mb-3 text-white">Life doesn’t come with subtitles.</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">No one hands you a script. No one tells you
+                            what to feel — or when.</p>
+                    </div>
+                    <div
+                        class="bg-primary/5 border border-primary/10 p-8 rounded-2xl hover:border-primary/40 transition-all duration-300">
+                        <span class="text-4xl font-display text-primary opacity-30 block mb-4">02</span>
+                        <h3 class="text-xl font-bold mb-3 text-white">Sometimes you can’t say sorry.</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">The words exist. They just refuse to leave
+                            your mouth at the right moment.</p>
+                    </div>
+                    <div
+                        class="bg-primary/5 border border-primary/10 p-8 rounded-2xl hover:border-primary/40 transition-all duration-300">
+                        <span class="text-4xl font-display text-primary opacity-30 block mb-4">03</span>
+                        <h3 class="text-xl font-bold mb-3 text-white">Sometimes you can’t say I love you.</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Even when every part of you means it. Even
+                            when they’re right there.</p>
+                    </div>
+                    <div
+                        class="bg-primary/5 border border-primary/10 p-8 rounded-2xl hover:border-primary/40 transition-all duration-300">
+                        <span class="text-4xl font-display text-primary opacity-30 block mb-4">04</span>
+                        <h3 class="text-xl font-bold mb-3 text-white">Sometimes you just need comfort.</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Not advice. Not solutions. Just something warm
+                            that says — I’m here.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Transition -->
+            <section class="py-24 text-center">
+                <h2 class="text-2xl md:text-3xl font-display font-bold shiny-text tracking-[0.3em] uppercase">— That’s
+                    Where Velvet Steps In —</h2>
+            </section>
+
+            <!-- Page 2 Content -->
+            <section class="bg-background-light dark:bg-[#120f0d] py-24 border-y border-primary/10">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+                        <div class="relative pl-12 border-l-2 border-primary/20">
+                            <span
+                                class="absolute left-0 top-0 -translate-x-1/2 bg-background-dark border-2 border-primary text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">05</span>
+                            <h4 class="text-2xl font-display font-bold text-white mb-2">Velvet understands before words
+                                do.</h4>
+                            <p class="text-slate-400">Every bar built around a feeling — not just a flavour. Real fruit.
+                                Real cocoa. Real emotion.</p>
+                        </div>
+                        <div class="relative pl-12 border-l-2 border-primary/20">
+                            <span
+                                class="absolute left-0 top-0 -translate-x-1/2 bg-background-dark border-2 border-primary text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">06</span>
+                            <h4 class="text-2xl font-display font-bold text-white mb-2">It melts like emotions.</h4>
+                            <p class="text-slate-400">Slowly. Completely. Without warning — exactly like the feelings we
+                                carry but never voice.</p>
+                        </div>
+                        <div class="relative pl-12 border-l-2 border-primary/20">
+                            <span
+                                class="absolute left-0 top-0 -translate-x-1/2 bg-background-dark border-2 border-primary text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">07</span>
+                            <h4 class="text-2xl font-display font-bold text-white mb-2">It comforts like a hug.</h4>
+                            <p class="text-slate-400">The kind that doesn’t need a reason. The kind that just holds.</p>
+                        </div>
+                        <div class="relative pl-12 border-l-2 border-primary/20">
+                            <span
+                                class="absolute left-0 top-0 -translate-x-1/2 bg-background-dark border-2 border-primary text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">08</span>
+                            <h4 class="text-2xl font-display font-bold text-white mb-2">It speaks when you can’t.</h4>
+                            <p class="text-slate-400">Pass a bar across the table. No explanation needed. They’ll
+                                understand.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-20 pt-16 border-t border-primary/10 text-center">
+                        <div class="space-y-6">
+                            <p class="text-2xl text-primary font-display italic">09. Velvet is not eaten.</p>
+                            <p class="text-slate-400 text-lg max-w-2xl mx-auto">It is not just a chocolate. It is not
+                                just a snack. It is an act.</p>
+                            <p class="text-4xl text-primary font-display font-bold shiny-text">10. Velvet is felt.</p>
+                            <p class="text-xl text-slate-300">And that — is everything we stand for.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div class="max-w-3xl mx-auto text-center mb-20">
+                    <span class="text-primary font-medium tracking-widest uppercase text-xs mb-4 block">About
+                        Velvet</span>
+                    <h2 class="text-5xl font-display font-bold text-white mb-8">We created a feeling.</h2>
+                    <div class="space-y-6 text-slate-300 text-lg leading-relaxed text-left">
+                        <p>Students across India sit in classrooms carrying worlds of emotion — pressure, loneliness,
+                            ambition, unspoken love — and the only chocolate available was cheap, forgettable, or made
+                            for someone else. Velvet was born to fix that.</p>
+                        <p>Every bar contains <strong class="text-primary font-normal">real fruit pieces inside</strong>
+                            and <strong class="text-primary font-normal">real fruit blended into the chocolate</strong>.
+                            Not flavouring. Not syrup. The actual thing. No shortcuts. Ever.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center border-y border-primary/10 py-16">
+                    <div class="group">
+                        <span
+                            class="text-6xl font-display font-bold text-primary block mb-2 group-hover:scale-110 transition-transform">8</span>
+                        <span class="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold">Variants<br /><span
+                                class="opacity-70 text-[10px]">milk & dark</span></span>
+                    </div>
+                    <div class="group">
+                        <span
+                            class="text-6xl font-display font-bold text-primary block mb-2 group-hover:scale-110 transition-transform">4</span>
+                        <span class="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold">Real fruits<br /><span
+                                class="opacity-70 text-[10px]">real emotions</span></span>
+                    </div>
+                    <div class="group">
+                        <span
+                            class="text-6xl font-display font-bold text-primary block mb-2 group-hover:scale-110 transition-transform">1</span>
+                        <span class="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold">Rebel who<br /><span
+                                class="opacity-70 text-[10px]">refused to wait</span></span>
+                    </div>
+                    <div class="group">
+                        <span
+                            class="text-6xl font-display font-bold text-primary block mb-2 group-hover:scale-110 transition-transform">∞</span>
+                        <span class="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold">Connections<br /><span
+                                class="opacity-70 text-[10px]">to make</span></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flavours List -->
+            <section class="bg-primary/5 py-24">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-20">
+                        <h2 class="text-4xl font-display font-bold text-primary mb-4">Four Flavours · Four Truths</h2>
+                        <div class="w-20 h-1 bg-primary/30 mx-auto"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div
+                            class="bg-background-dark p-10 rounded-2xl border border-primary/10 hover:border-primary/40 transition-colors">
+                            <h3 class="text-2xl font-display font-bold text-white mb-2">Kiwi</h3>
+                            <p class="text-xs text-primary uppercase tracking-[0.2em] font-bold mb-6">Milk & Dark</p>
+                            <p class="text-lg text-slate-300 font-bold mb-4">Kindness · Renewal</p>
+                            <p class="text-slate-500 italic">"For when you want to be kind to someone, including
+                                yourself."</p>
+                        </div>
+                        <div
+                            class="bg-background-dark p-10 rounded-2xl border border-primary/10 hover:border-primary/40 transition-colors">
+                            <h3 class="text-2xl font-display font-bold text-white mb-2 text-wrap">Pineapple & Black
+                                Raisin</h3>
+                            <p class="text-xs text-primary uppercase tracking-[0.2em] font-bold mb-6">Milk & Dark</p>
+                            <p class="text-lg text-slate-300 font-bold mb-4">Energy · Warmth · Strength</p>
+                            <p class="text-slate-500 italic">"For when you need fire in your belly and focus in your
+                                mind."</p>
+                        </div>
+                        <div
+                            class="bg-background-dark p-10 rounded-2xl border border-primary/10 hover:border-primary/40 transition-colors">
+                            <h3 class="text-2xl font-display font-bold text-white mb-2">Blueberry</h3>
+                            <p class="text-xs text-primary uppercase tracking-[0.2em] font-bold mb-6">Milk & Dark</p>
+                            <p class="text-lg text-slate-300 font-bold mb-4">Calm · Wisdom · Focus</p>
+                            <p class="text-slate-500 italic">"For when the world is loud and you need to hear yourself
+                                think."</p>
+                        </div>
+                        <div
+                            class="bg-background-dark p-10 rounded-2xl border border-primary/10 hover:border-primary/40 transition-colors">
+                            <h3 class="text-2xl font-display font-bold text-white mb-2">The Mix</h3>
+                            <p class="text-xs text-primary uppercase tracking-[0.2em] font-bold mb-6">Milk & Dark</p>
+                            <p class="text-lg text-slate-300 font-bold mb-4">Love · Joy · Togetherness</p>
+                            <p class="text-slate-500 italic">"For when one feeling isn’t enough to describe how you
+                                feel."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Page 3 & 4 Founder -->
+            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div class="flex flex-col lg:flex-row gap-20 items-center">
+                    <div class="w-full lg:w-2/5">
+                        <div
+                            class="aspect-square bg-primary/10 rounded-3xl border border-primary/20 flex items-center justify-center p-12 relative overflow-hidden group">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-background-dark to-transparent opacity-80 transition-opacity group-hover:opacity-40">
+                            </div>
+                            <span class="text-9xl font-display font-bold text-primary opacity-20 relative z-10">SR</span>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-3/5">
+                        <span class="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Our
+                            Founder</span>
+                        <h2 class="text-5xl md:text-6xl font-display font-bold text-white mb-8">The rebel who refused to
+                            wait.</h2>
+
+                        <div class="flex items-center gap-4 mb-10">
+                            <div class="w-12 h-1 bg-primary"></div>
+                            <p class="text-xl text-primary font-display font-bold uppercase tracking-widest">Siddharth
+                                Rana</p>
+                        </div>
+
+                        <p class="text-slate-500 text-sm uppercase tracking-widest mb-10">Founder · Velvet & Fruits
+                            Company · Gaya, Bihar · Age 22</p>
+
+                        <blockquote class="italic text-2xl text-slate-200 font-display mb-10 leading-relaxed relative">
+                            <span class="absolute -left-8 -top-4 text-6xl text-primary opacity-20 font-serif">“</span>
+                            I didn’t start Velvet to sell chocolate. I started it because I walked into classrooms full
+                            of brilliant students carrying silent battles — and I thought, someone should say
+                            something. So I did. With a chocolate bar.
+                            <span
+                                class="text-sm font-sans block mt-4 text-primary not-italic font-bold uppercase tracking-widest">—
+                                Siddharth Rana</span>
+                        </blockquote>
+
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            Siddharth was 22 when he noticed something everyone else had ignored. Coaching centres
+                            across India were packed with students who were stressed, lonely, and surrounded by nothing
+                            that truly spoke to them. Nobody made something for a 17-year-old sitting alone at 11pm,
+                            trying to crack JEE. So he decided to.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Beliefs -->
+                <div class="mt-32">
+                    <h3 class="text-3xl font-display text-center text-primary mb-16 uppercase tracking-[0.3em]">What He
+                        Actually Believes</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="bg-primary/5 p-10 rounded-2xl border border-primary/10 flex gap-6">
+                            <span class="text-3xl font-display font-bold text-primary opacity-40">1</span>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-3">Selling is secondary.</h4>
+                                <p class="text-slate-400 leading-relaxed text-sm">If you walk up to a student and your
+                                    first instinct is to pitch — you’ve already lost. Ask why they’re sitting alone
+                                    first. The bar comes last.</p>
+                            </div>
+                        </div>
+                        <div class="bg-primary/5 p-10 rounded-2xl border border-primary/10 flex gap-6">
+                            <span class="text-3xl font-display font-bold text-primary opacity-40">2</span>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-3">Motivation before marketing.</h4>
+                                <p class="text-slate-400 leading-relaxed text-sm">A student who believes in themselves
+                                    will remember the person who believed in them first — and what was in their hand
+                                    when it happened.</p>
+                            </div>
+                        </div>
+                        <div class="bg-primary/5 p-10 rounded-2xl border border-primary/10 flex gap-6">
+                            <span class="text-3xl font-display font-bold text-primary opacity-40">3</span>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-3">Success is not a dream.</h4>
+                                <p class="text-slate-400 leading-relaxed text-sm">It’s a decision you make at 2am when
+                                    everyone else is asleep. You hustle, you ache, you rise — and you make every person
+                                    who believed in you worth it.</p>
+                            </div>
+                        </div>
+                        <div class="bg-primary/5 p-10 rounded-2xl border border-primary/10 flex gap-6">
+                            <span class="text-3xl font-display font-bold text-primary opacity-40">4</span>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-3">Make your bloodline proud.</h4>
+                                <p class="text-slate-400 leading-relaxed text-sm">Not your batch topper. Not your
+                                    teacher. The people who came before you worked so you could sit in that classroom.
+                                    They deserve your best.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Page 4 Letter -->
+            <section class="bg-primary text-background-dark py-24 px-6 md:px-12 relative overflow-hidden">
+                <div
+                    class="absolute right-0 top-0 text-[20rem] font-display font-bold opacity-5 pointer-events-none -translate-y-1/2 translate-x-1/4">
+                    V</div>
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <span class="block text-center text-xs font-bold uppercase tracking-[0.4em] mb-12 opacity-60">A
+                        Letter · To every student sitting alone right now</span>
+                    <div class="space-y-8 text-xl md:text-2xl font-medium leading-relaxed font-display">
+                        <p>If you’re reading this sitting alone somewhere — I see you.</p>
+                        <p>I won’t tell you it gets easier. I’ll ask you what’s making it hard. I’ll stay long enough to
+                            know your name, your dream, and what’s standing between you and it.</p>
+                        <p>I won’t motivate you with posters or slogans. I’ll sit next to you and ask — what happened?
+                            What are you fighting?</p>
+                        <p>And when you’ve said it all — only then will I say this:</p>
+                        <p
+                            class="text-3xl md:text-4xl font-bold border-l-8 border-background-dark pl-8 my-16 py-4 italic">
+                            "Success is not something you sleep and dream. You hustle. You ache. You fight for your
+                            bloodline, for everyone who worked so you could be in that room. And you rise."
+                        </p>
+                        <p>Try Velvet. Not because it’s just a chocolate — but because every time you unwrap it, I want
+                            you to remember: someone out there built this for you. Someone who asked “why” before they
+                            said “buy”.</p>
+                    </div>
+
+                    <div class="mt-20 pt-12 border-t border-background-dark/20 flex items-end justify-between">
+                        <div>
+                            <p class="font-display font-bold text-3xl mb-1">Siddharth Rana</p>
+                            <p class="text-sm font-sans uppercase tracking-[0.2em] font-bold opacity-70">Founder, Velvet
+                                · Real Fruit. Real Cocoa. Real Feeling.</p>
+                        </div>
+                        <span class="material-symbols-outlined text-6xl opacity-30">draw</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Page 5 Mission -->
+            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+                <span class="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-6 block">Our Mission</span>
+                <h2 class="text-4xl md:text-6xl font-display font-bold text-white mb-20 max-w-4xl mx-auto">Make chocolate
+                    that truly connects people.</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20 max-w-5xl mx-auto text-left">
+                    <div class="flex gap-8 group">
+                        <span
+                            class="text-5xl font-display text-primary opacity-20 font-bold group-hover:opacity-100 transition-opacity">01</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-4 italic font-display">Close the emotional gap
+                            </h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Velvet exists in those millions of moments
+                                where people feel something they can’t say — to be the bridge between a feeling and its
+                                expression.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 group">
+                        <span
+                            class="text-5xl font-display text-primary opacity-20 font-bold group-hover:opacity-100 transition-opacity">02</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-4 italic font-display">Redefine premium for
+                                India’s students</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Premium means made with intention, sold
+                                with respect, built for someone specific — not a leftover from someone else’s market.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 group">
+                        <span
+                            class="text-5xl font-display text-primary opacity-20 font-bold group-hover:opacity-100 transition-opacity">03</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-4 italic font-display">Real fruit. Always.</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Actual fruit pieces inside every bar, real
+                                fruit blended into every bite. What we promise on the outside exists on the inside. No
+                                shortcuts. Ever.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 group">
+                        <span
+                            class="text-5xl font-display text-primary opacity-20 font-bold group-hover:opacity-100 transition-opacity">04</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-4 italic font-display">Prove that India can build
+                                this</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">A young founder from Gaya building an
+                                emotion-first chocolate brand. Not importing an idea. Creating something new — for
+                                India, by India.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mt-32 space-y-4 text-2xl md:text-3xl font-display text-primary uppercase tracking-[0.2em] opacity-80">
+                    <p>We are not here to compete.</p>
+                    <p>We are not here to follow.</p>
+                    <p class="text-white text-5xl font-bold my-12 shiny-text tracking-[0.4em]">We are here to connect.
+                    </p>
+                    <p>One student. One bar. One feeling. At a time.</p>
+                    <p>Until the whole country feels it.</p>
+                </div>
+            </section>
+
+            <!-- Page 5 Journey -->
+            <section class="bg-background-light dark:bg-[#0d0a09] py-32 border-t border-primary/20">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-24">
+                        <span class="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-8 block">Join the
+                            Journey</span>
+                        <h2 class="text-4xl md:text-5xl font-display font-bold text-white">Velvet is not finished. It’s
+                            just beginning.</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-4">
+                        <div
+                            class="bg-primary/5 p-8 rounded-2xl border border-primary/10 flex flex-col md:flex-row gap-8 items-start hover:border-primary/40 transition-colors">
+                            <div class="p-4 bg-primary/10 text-primary rounded-xl shrink-0">
+                                <span class="material-symbols-outlined text-3xl">storefront</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Taste it first</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">Find us at Aakash and PW centres. The
+                                    first bar is always a conversation — not a sale. We show up before we sell.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-primary/5 p-8 rounded-2xl border border-primary/10 flex flex-col md:flex-row gap-8 items-start hover:border-primary/40 transition-colors">
+                            <div class="p-4 bg-primary/10 text-primary rounded-xl shrink-0">
+                                <span class="material-symbols-outlined text-3xl">history_edu</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Tell your story</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">Which flavour spoke to you — and why?
+                                    Share it. Your story might be exactly what someone else needed to hear today.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-primary/5 p-8 rounded-2xl border border-primary/10 flex flex-col md:flex-row gap-8 items-start hover:border-primary/40 transition-colors">
+                            <div
+                                class="p-4 bg-primary/10 text-primary rounded-xl shrink-0 font-bold text-2xl flex items-center justify-center">
+                                5</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Ask your local shop to stock Velvet</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">We grow through demand, not
+                                    distribution. Five students asking the same shopkeeper is all it takes.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-primary/5 p-8 rounded-2xl border border-primary/10 flex flex-col md:flex-row gap-8 items-start hover:border-primary/40 transition-colors">
+                            <div class="p-4 bg-primary/10 text-primary rounded-xl shrink-0">
+                                <span class="material-symbols-outlined text-3xl">badge_critical_battery</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Be a campus ambassador</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">Velvet is looking for people who
+                                    connect before they convince. If that’s you — we want to talk.</p>
+                            </div>
+                        </div>
+                        <div class="bg-primary/10 p-10 rounded-2xl border-2 border-primary/20 text-center space-y-6">
+                            <h4 class="text-2xl font-display font-bold text-white">Write to Siddharth</h4>
+                            <p class="text-slate-400 italic">"He still reads every message. If something Velvet made you
+                                feel is worth saying â€” say it."</p>
+                            <a href="mailto:eatwithvelvetnfruits@gmail.com"
+                                class="inline-flex items-center gap-2 bg-primary text-background-dark px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform">
+                                <span class="material-symbols-outlined">mail</span>
+                                eatwithvelvetnfruits@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-32 pt-20 border-t border-primary/10 text-center">
+                        <h3 class="text-3xl font-display font-bold text-white mb-6">This is Chapter One. You’re early.
+                        </h3>
+                        <p class="text-slate-500 text-sm max-w-3xl mx-auto leading-relaxed">One day, Velvet will be in
+                            every city, every classroom, every quiet moment between two people who can’t find the words.
+                            We’re not there yet — but we’re moving. And every person who believes in this early makes
+                            the whole thing more real.</p>
+
+                        <div class="mt-16 flex items-center justify-center gap-4 text-primary opacity-50">
+                            <span class="h-px w-20 bg-primary"></span>
+                            <span class="font-display font-bold tracking-[0.5em] uppercase text-xs">Velvet & Fruits
+                                Company</span>
+                            <span class="h-px w-20 bg-primary"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="bg-background-dark border-t border-primary/10 pt-16 pb-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center gap-2 mb-6">
+                            <div class="h-10 w-auto flex items-center justify-center">
+                                <img src="../images/untitled-2.png" alt="Velvet Logo"
+                                    class="h-full object-contain logo-shiny" />
+                            </div>
+                            <span class="text-xl font-display font-bold tracking-tight shiny-text mt-1">Velvet</span>
+                        </div>
+                        <p class="text-slate-500 max-w-sm mb-4">
+                            Real Fruit · Real Cocoa · Real Feeling
+                        </p>
+                        <div class="space-y-1 text-xs text-slate-500 font-medium">
+                            <p>Velvet & Fruits Company</p>
+                            <p>Mahavir Colony, Gaya, Bihar-823001, India</p>
+                            <p><a href="mailto:eatwithvelvetnfruits@gmail.com"
+                                    class="hover:text-primary transition-colors">eatwithvelvetnfruits@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4 uppercase text-xs tracking-[0.2em] text-primary">Explore</h4>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li><a class="hover:text-primary transition-colors" href="home.html">Home</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="our-collection.html">Our Collection</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="our-story.html">Our Story</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4 uppercase text-xs tracking-[0.2em] text-primary">Legal</h4>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li><a class="hover:text-primary transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="border-t border-primary/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-slate-600 font-bold uppercase tracking-widest">
+                    <p>&copy; 2024 Velvet Chocolate Co. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <span>Est 2024 Gaya</span>
+                        <span>Handcrafted in India</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>ml>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Our Collection | Velvet Chocolates</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c59f59",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1e1a14",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation -->
+            <header
+                class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+                <div class="mx-auto flex max-w-7xl items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <a href="home.html" class="block h-10">
+                            <img src="../images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
+                        </a>
+                        <h2 class="font-display text-xl font-bold tracking-widest text-primary uppercase">Velvet</h2>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-10">
+                        <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                            href="home.html">Home</a>
+                        <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                            href="our-collection.html">Chocolates</a>
+                        <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                            href="our-collection.html">Shop</a>
+                        <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                            href="our-story.html">Our Story</a>
+                        <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                            href="contact-us.html">Contact</a>
+                    </nav>
+                    <div class="flex items-center gap-4">
+                        <a href="checkout.html"
+                            class="flex items-center justify-center rounded bg-primary/10 p-2 text-primary hover:bg-primary hover:text-background-dark transition-all">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                        </a>
+                        <a href="my-account.html"
+                            class="h-8 w-8 rounded-full bg-primary/20 border border-primary/30 overflow-hidden">
+                            <img class="h-full w-full object-cover" data-alt="Portrait of a person profile"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyEktfGtFaxoReKL0kH6uTswf6LVP-WP-dyqHXOSOOT7iwwR02FpWbaQm0-C6HKeGTpN9x6NFlxIqJsvQPgVwtyXqm3SnxGuPlwINsxL4HBK_7YjmLIGh3wRlQq7bdXvDypwdgV8CBTG3AaUSnEQCSFAw2dz2duib4-ruipw7C-ixVf_adoRVGDZkYgP3t6-ZOBiGzDE1XBDbTlRe4XGsD2M4AlRayK-MJ0aOnc3wHlyMvfw3fYcheWpVSpU4ONyayIrxE1AUayT8" />
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-1">
+                <!-- Hero Section -->
+                <div class="@container">
+                    <div class="pt-20">
+                        <div class="relative w-full aspect-[21/9] md:aspect-[3/1] overflow-hidden flex items-center bg-cover bg-center"
+                            data-alt="Artisan chocolate truffles arranged beautifully on a dark surface"
+                            style='background-image: linear-gradient(0deg, rgba(30, 26, 20, 0.8) 0%, rgba(30, 26, 20, 0.2) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCM3Wm5RO1IHTariJRg4jM3wDWysgu5N0dNUJ-sDCkvC7yBZIG2fZFbgB5EokQesIMOgd8ZnHbipwKUns51NUyjvcPIqyBYHyjqEHf_NWrJolfxdP8XRynXlRzqy23KFBZAIOgUshOJIKBow4WRlnbOCEHwFhV0L_nj5NhBu3DFfyLLzCYm-e-gfvMP957k7YCa9jmQOl-g188U-AhmbuAU7lm_UALdnMKInS-zxZezH4lv2U");'>
+                            <div class="flex flex-col p-8 md:p-12">
+                                <h1 class="text-white text-4xl md:text-5xl font-bold leading-tight mb-2">The Collection
+                                </h1>
+                                <p class="text-primary text-lg font-medium">Handcrafted masterpieces for every palate
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab Navigation -->
+
+                <!-- Content Grid -->
+                <div class="max-w-7xl mx-auto px-4 py-12">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                        <!-- Product 1 -->
+                        <div
+                            class="group flex flex-col bg-white dark:bg-slate-900/40 rounded-xl overflow-hidden border border-slate-200 dark:border-primary/10 hover:border-primary transition-all duration-300">
+                            <div class="aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="../images/kiwi-dark.png" />
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Kiwi Dark
+                                        Chocolate</h3>
+                                    <span class="text-primary font-bold">
+                                        ₹99
+                                    </span>
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 italic leading-relaxed">72%
+                                    Single-origin Tanzanian cocoa with a velvet-smooth heart.</p>
+                                <button
+                                    class="mt-auto w-full py-2 bg-slate-900 dark:bg-primary text-white dark:text-slate-900 text-sm font-bold rounded hover:opacity-90 transition-opacity add-to-box">Add
+                                    to Box</button>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div
+                            class="group flex flex-col bg-white dark:bg-slate-900/40 rounded-xl overflow-hidden border border-slate-200 dark:border-primary/10 hover:border-primary transition-all duration-300">
+                            <div class="aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="../images/blueberry-dark-chocolate.jpg" />
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Blueberry
+                                        Dark Chocolate</h3>
+                                    <span class="text-primary font-bold">
+                                        ₹99
+                                    </span>
+                                </div>
+
+                                <button
+                                    class="mt-auto w-full py-2 bg-slate-900 dark:bg-primary text-white dark:text-slate-900 text-sm font-bold rounded hover:opacity-90 transition-opacity add-to-box">Add
+                                    to Box</button>
+                            </div>
+                        </div>
+                        <!-- Product 3 -->
+                        <div
+                            class="group flex flex-col bg-white dark:bg-slate-900/40 rounded-xl overflow-hidden border border-slate-200 dark:border-primary/10 hover:border-primary transition-all duration-300">
+                            <div class="aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="../images/pineapple-raisin-dark.png" />
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Pineapple
+                                        &
+                                        Black Raisins <br>Dark Chocolate</h3>
+                                    <span class="text-primary font-bold">₹99</span>
+                                </div>
+
+                                <button
+                                    class="mt-auto w-full py-2 bg-slate-900 dark:bg-primary text-white dark:text-slate-900 text-sm font-bold rounded hover:opacity-90 transition-opacity add-to-box">Add
+                                    to Box</button>
+                            </div>
+                        </div>
+                        <!-- Product 4 -->
+                        <div
+                            class="group flex flex-col bg-white dark:bg-slate-900/40 rounded-xl overflow-hidden border border-slate-200 dark:border-primary/10 hover:border-primary transition-all duration-300">
+                            <div class="aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    data-alt="Dark chocolate with spicy chili flakes"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp68-w71ud0rFZ_Ght95-OZRqmo1IknQUnyBC_YJbiSLjbjIgL3GTpDcrCL8v5vYsgYif_yfCLIa01PPS5M8xwP8mHV19kH9ogTlv2lV2uZdvs4Z0pHtG1Y_6nSBiUHU5MQLRZ2Xinuyqy32ffdbWotiMQ4kh2lQ1pl7JO8DrEPSrQArcFCeKP6Z3gjKCTI_aTuWpQFHExSaU-UmU5Mw9Ma850_Zy6rrddcZbmbfH7IUChAkKb4J0S-L4Yisr5y1tfRzVOduGj0rM" />
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Chili
+                                        Obsidian</h3>
+                                    <span class="text-primary font-bold">₹99</span>
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 italic leading-relaxed">
+                                    Slow-creeping heat of Ancho chili meets intense dark chocolate.</p>
+                                <button
+                                    class="mt-auto w-full py-2 bg-slate-900 dark:bg-primary text-white dark:text-slate-900 text-sm font-bold rounded hover:opacity-90 transition-opacity add-to-box">Add
+                                    to Box</button>
+                            </div>
+                        </div>
+                        <!-- Product 5 (Milk) -->
+                        <div
+                            class="group flex flex-col bg-white dark:bg-slate-900/40 rounded-xl overflow-hidden border border-slate-200 dark:border-primary/10 hover:border-primary transition-all duration-300">
+                            <div class="aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    data-alt="Milk chocolate salted caramel dome"
+                                    src="../images/kiwi-dark.png" />
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Golden
+                                        Caramel</h3>
+                                    <span class="text-primary font-bold">₹99</span>
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 italic leading-relaxed">Silky
+                                    smooth Alpine milk chocolate with a flowing amber center.</p>
+                                <button
+                                    class="mt-auto w-full py-2 bg-slate-900 dark:bg-primary text-white dark:text-slate-900 text-sm font-bold rounded hover:opacity-90 transition-opacity add-to-box">Add
+                                    to Box</button>
+                            </div>
+                        </div>
+                        <!-- Product 6 (Milk) -->
+                        <div
+                            class="group flex flex-col bg-white dark:bg-slate-900/40 rounded-xl overflow-hidden border border-slate-200 dark:border-primary/10 hover:border-primary transition-all duration-300">
+                            <div class="aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    data-alt="Milk chocolate with crushed hazelnuts"
+                                    src="../images/blueberry-bliss-milk.png" />
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Blueberry
+                                        Bliss <br>
+                                        Milk Chocolate</h3>
+                                    <span class="text-primary font-bold">₹99</span>
+                                </div>
+
+                                <button
+                                    class="mt-auto w-full py-2 bg-slate-900 dark:bg-primary text-white dark:text-slate-900 text-sm font-bold rounded hover:opacity-90 transition-opacity add-to-box">Add
+                                    to Box</button>
+                            </div>
+                        </div>
+                        <!-- Product 7 (Milk) -->
+                        <div
+                            class="group flex flex-col bg-white dark:bg-slate-900/40 rounded-xl overflow-hidden border border-slate-200 dark:border-primary/10 hover:border-primary transition-all duration-300">
+                            <div class="aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    data-alt="White chocolate with vanilla bean flecks"
+                                    src="../images/kiwi-dark.png" />
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Kiwi
+                                        Bliss<br> Dark Chocolate
+                                    </h3>
+                                    <span class="text-primary font-bold">₹99</span>
+                                </div>
+
+                                <button
+                                    class="mt-auto w-full py-2 bg-slate-900 dark:bg-primary text-white dark:text-slate-900 text-sm font-bold rounded hover:opacity-90 transition-opacity add-to-box">Add
+                                    to Box</button>
+                            </div>
+                        </div>
+                        <!-- Product 8 (Milk) -->
+                        <div
+                            class="group flex flex-col bg-white dark:bg-slate-900/40 rounded-xl overflow-hidden border border-slate-200 dark:border-primary/10 hover:border-primary transition-all duration-300">
+                            <div class="aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    data-alt="Milk chocolate with honey honeycomb pieces"
+                                    src="../images/pineapple-raisin-milk.png" />
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Pineapple
+                                        &
+                                        Raisin <br> Milk Chocolate Blossom</h3>
+                                    <span class="text-primary font-bold">₹99</span>
+                                </div>
+                                <button
+                                    class="mt-auto w-full py-2 bg-slate-900 dark:bg-primary text-white dark:text-slate-900 text-sm font-bold rounded hover:opacity-90 transition-opacity add-to-box">Add
+                                    to Box</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Corporate Gifting Banner -->
+                <div class="w-full bg-slate-200/50 dark:bg-background-dark py-16 px-4">
+                    <div
+                        class="max-w-5xl mx-auto rounded-xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-primary/20 shadow-xl flex flex-col md:flex-row">
+                        <div class="md:w-1/3 bg-primary/10 flex items-center justify-center p-8">
+                            <span class="material-symbols-outlined text-primary text-7xl">card_giftcard</span>
+                        </div>
+                        <div class="md:w-2/3 p-8 md:p-12">
+                            <h2 class="text-3xl font-bold mb-4">Corporate Gifting &amp; Bulk Orders</h2>
+                            <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                                Elevate your professional relationships with our premium artisan collections.
+                                We offer custom branding, curated assortments, and white-glove delivery for
+                                offices, events, and festive gifting.
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <button
+                                    class="bg-primary hover:bg-primary/90 text-slate-900 font-bold px-8 py-3 rounded transition-colors">
+                                    Download Catalog
+                                </button>
+                                <button
+                                    class="border-2 border-primary text-primary font-bold px-8 py-3 rounded hover:bg-primary/10 transition-colors">
+                                    Contact Sales
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Footer -->
+            <footer
+                class="bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-primary/20 py-12">
+                <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div class="flex items-center gap-3">
+                        <div class="size-6 text-primary">
+                            <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <span class="text-lg font-bold">Velvet Chocolates</span>
+                    </div>
+                    <ul class="flex gap-8 text-sm text-slate-500">
+                        <li><a class="hover:text-primary" href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a class="hover:text-primary" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-primary" href="our-story.html">Sustainability</a></li>
+                    </ul>
+                    <div class="flex gap-4">
+                        <span
+                            class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer">social_leaderboard</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer">camera</span>
+                        <span
+                            class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer">mail</span>
+                    </div>
+                </div>
+                <p class="text-center text-slate-500 text-xs mt-8">© 2024 Velvet Chocolates Artisan Cocoa. All rights
+                    reserved.</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.add-to-box').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const originalText = this.textContent;
+                this.disabled = true;
+                this.textContent = 'Adding...';
+                this.classList.add('brightness-125');
+
+                const toast = document.createElement('div');
+                toast.className = 'fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-[#1E1A14] border border-[#C59F59] text-[#C59F59] px-8 py-4 rounded-xl shadow-2xl font-bold text-center transition-all duration-500 opacity-0 transform translate-y-4';
+                toast.textContent = 'Added to Box!';
+                document.body.appendChild(toast);
+
+                requestAnimationFrame(() => {
+                    toast.style.opacity = '1';
+                    toast.style.transform = 'translate(-50%, 0)';
+                });
+
+                setTimeout(() => {
+                    window.location.href = 'checkout.html';
+                }, 1000);
+            });
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const originalText = this.textContent;
+                this.disabled = true;
+                this.textContent = 'Adding...';
+                this.classList.add('brightness-125');
+
+                const toast = document.createElement('div');
+                toast.className = 'fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-[#1E1A14] border border-[#C59F59] text-[#C59F59] px-8 py-4 rounded-xl shadow-2xl font-bold text-center transition-all duration-500 opacity-0 transform translate-y-4';
+                toast.textContent = 'Added to Box!';
+                document.body.appendChild(toast);
+
+                requestAnimationFrame(() => {
+                    toast.style.opacity = '1';
+                    toast.style.transform = 'translate(-50%, 0)';
+                });
+
+                setTimeout(() => {
+                    window.location.href = 'checkout.html';
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

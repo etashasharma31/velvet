@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c59f59",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1e1a14",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-serif {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <header
+            class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+            <div class="mx-auto flex max-w-7xl items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="home.html" class="block h-10">
+                        <img src="../images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
+                    </a>
+                    <h2 class="font-display text-xl font-bold tracking-widest text-primary uppercase">Velvet</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                        href="home.html">Home</a>
+                    <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                        href="our-collection.html">Chocolates</a>
+                    <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                        href="our-collection.html">Shop</a>
+                    <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                        href="our-story.html">Our Story</a>
+                    <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
+                        href="contact-us.html">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="checkout.html"
+                        class="flex items-center justify-center rounded bg-primary/10 p-2 text-primary hover:bg-primary hover:text-background-dark transition-all">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                    </a>
+                    <a href="my-account.html"
+                        class="h-8 w-8 rounded-full bg-primary/20 border border-primary/30 overflow-hidden">
+                        <img class="h-full w-full object-cover" data-alt="Portrait of a person profile"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyEktfGtFaxoReKL0kH6uTswf6LVP-WP-dyqHXOSOOT7iwwR02FpWbaQm0-C6HKeGTpN9x6NFlxIqJsvQPgVwtyXqm3SnxGuPlwINsxL4HBK_7YjmLIGh3wRlQq7bdXvDypwdgV8CBTG3AaUSnEQCSFAw2dz2duib4-ruipw7C-ixVf_adoRVGDZkYgP3t6-ZOBiGzDE1XBDbTlRe4XGsD2M4AlRayK-MJ0aOnc3wHlyMvfw3fYcheWpVSpU4ONyayIrxE1AUayT8" />
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section class="relative flex min-h-screen items-center justify-center px-6 pt-20">
+            <div class="absolute inset-0 z-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-background-dark/60 via-background-dark/80 to-background-dark">
+                </div>
+                <img class="h-full w-full object-cover opacity-60"
+                    data-alt="Abstract smooth dark chocolate waves texture"
+                    src="../images/hero-bg.jpg" />
+            </div>
+            <div class="relative z-10 flex max-w-4xl flex-col items-center text-center">
+                <span class="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-primary/80">Handcrafted
+                    Fruit-Infused Chocolate · Made with Real Ingredients</span>
+                <h1 class="font-display text-7xl md:text-9xl font-bold tracking-tighter text-primary mb-8">VELVET</h1>
+                <p class="font-display text-xl md:text-3xl italic text-slate-200 mb-4">Real Fruit. Real Cocoa. Real
+                    Feeling.</p>
+                <p class="max-w-xl text-sm md:text-base leading-relaxed text-slate-400 mb-12">
+                    Eight flavours. Two chocolate worlds. One honest promise.
+                </p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="our-collection.html"
+                        class="min-w-[200px] rounded bg-primary px-8 py-4 text-center text-sm font-bold uppercase tracking-widest text-background-dark hover:brightness-110 transition-all">
+                        Explore the Collection
+                    </a>
+                    <a href="our-story.html"
+                        class="min-w-[200px] rounded border border-primary/40 px-8 py-4 text-center text-sm font-bold uppercase tracking-widest text-primary hover:bg-primary/10 transition-all">
+                        Read Our Story
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="bg-background-dark border-y border-primary/10 py-24 px-6">
+            <div class="mx-auto max-w-5xl">
+                <div class="flex flex-col md:flex-row items-end justify-between gap-8 mb-16">
+                    <div class="max-w-2xl">
+                        <h2 class="font-display text-4xl text-slate-100 mb-6">Where Fruit Meets Cocoa</h2>
+                        <p class="text-lg text-slate-400 leading-relaxed">
+                            Experience the harmony of real fruit and single-origin cocoa. Eight distinct expressions of
+                            nature, curated for the discerning palate.
+                        </p>
+                    </div>
+                    <a href="our-collection.html"
+                        class="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-primary hover:gap-4 transition-all">
+                        See All 8 Flavours <span class="material-symbols-outlined">trending_flat</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-[3/4] overflow-hidden rounded bg-primary/5 group relative cursor-pointer add-to-cart">
+                        <img class="h-full w-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Dark chocolate bar with raspberry pieces"
+                            src="../images/blueberry-dark-chocolate.jpg" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+                        <span
+                            class="absolute bottom-4 left-4 text-xs font-bold uppercase tracking-widest text-white">Blueberry</span>
+                    </div>
+                    <div class="aspect-[3/4] overflow-hidden rounded bg-primary/5 group relative cursor-pointer add-to-cart">
+                        <img class="h-full w-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Milk chocolate with orange zest"
+                            src="../images/pineapple-raisin-milk.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+                        <span
+                            class="absolute bottom-4 left-4 text-xs font-bold uppercase tracking-widest text-white">Pineapple
+                            & Raisin </span>
+                    </div>
+                    <div class="aspect-[3/4] overflow-hidden rounded bg-primary/5 group relative cursor-pointer add-to-cart">
+                        <img class="h-full w-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Artisanal chocolate with passionfruit"
+                            src="../images/kiwi-dark.png" />
+                        <div class=" absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent">
+                        </div>
+                        <span
+                            class="absolute bottom-4 left-4 text-xs font-bold uppercase tracking-widest text-white">Kiwi</span>
+                    </div>
+                    <div class="aspect-[3/4] overflow-hidden rounded bg-primary/5 group relative cursor-pointer add-to-cart">
+                        <img class="h-full w-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Dark chocolate with sea salt and fig"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_bBI-BGjN1qAVs7IZpGTblIFYc0mCegGyVoslGBcXfheuDJpjfb0ZsEKgihDcXrqYraIpH2m3PqW8dRfP6q-Phy9V-KDTtddYjnCwRu2KH2mMwVSBd_kghwcVkfml_Y6NaIYz90GdJt0gzLV1V3VcromGIQNxgiA9VRfkAXpizfu5K5QP41D0wiQvWv1yUsbsDp44X1c0USxkywac1-_N6WjThvLLkfhBPJG0JTV0Gs9zO05lJKiMNL_fODRuhSYVxqkZnXNl3Es" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+                        <span
+                            class="absolute bottom-4 left-4 text-xs font-bold uppercase tracking-widest text-white">Wild
+                            Fig</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-primary/5 py-20 px-6">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+                    <div class="flex flex-col items-center">
+                        <span class="font-display text-5xl font-bold text-primary mb-2">100%</span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Real Fruit</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="font-display text-5xl font-bold text-primary mb-2">8</span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Flavours</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="font-display text-5xl font-bold text-primary mb-2">0</span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Artificial
+                            Flavouring</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="font-display text-5xl font-bold text-primary mb-2">2</span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Chocolate Worlds</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-background-dark py-32 px-6 overflow-hidden">
+            <div class="mx-auto max-w-4xl text-center">
+                <h3 class="font-display text-sm italic text-primary mb-8 tracking-widest uppercase">Born from a belief
+                </h3>
+                <p class="font-display text-3xl md:text-5xl leading-tight text-slate-100 mb-10">
+                    We believe in the quiet honesty of ingredients. Nature provides the depth; we simply provide the
+                    craft.
+                </p>
+                <div class="h-px w-24 bg-primary/30 mx-auto mb-10"></div>
+                <p class="mx-auto max-w-2xl text-slate-400 leading-relaxed">
+                    By sourcing single-origin cocoa and hand-selecting fruit at the peak of its season, we've created a
+                    dialogue between two worlds that is as pure as it is evocative.
+                </p>
+            </div>
+        </section>
+        <section class="bg-background-light dark:bg-background-dark border-t border-primary/10 py-24 px-6">
+            <div class="mx-auto max-w-7xl">
+                <div class="mb-16 text-center">
+                    <h2 class="font-display text-4xl text-slate-100">Real Feelings, Real Words</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col rounded-xl border border-primary/10 bg-primary/5 p-10">
+                        <div class="mb-6 text-primary">
+                            <span class="material-symbols-outlined font-fill text-3xl">format_quote</span>
+                        </div>
+                        <p class="mb-8 font-display italic text-lg text-slate-200">
+                            "The transition from the initial cocoa depth to the bright, sharp notes of the fruit is a
+                            journey in every bite. Truly evocative."
+                        </p>
+                        <div class="mt-auto">
+                            <span class="text-xs font-bold uppercase tracking-widest text-primary">Julianne
+                                Thorne</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col rounded-xl border border-primary/10 bg-primary/5 p-10">
+                        <div class="mb-6 text-primary">
+                            <span class="material-symbols-outlined font-fill text-3xl">format_quote</span>
+                        </div>
+                        <p class="mb-8 font-display italic text-lg text-slate-200">
+                            "Finally, a creation that respects the integrity of the fruit. You can feel the honesty of
+                            the ingredients immediately."
+                        </p>
+                        <div class="mt-auto">
+                            <span class="text-xs font-bold uppercase tracking-widest text-primary">Marcus Vonn</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col rounded-xl border border-primary/10 bg-primary/5 p-10">
+                        <div class="mb-6 text-primary">
+                            <span class="material-symbols-outlined font-fill text-3xl">format_quote</span>
+                        </div>
+                        <p class="mb-8 font-display italic text-lg text-slate-200">
+                            "The dark chocolate texture is unmatched. It’s a slow, calm experience that stays with you
+                            long after it’s gone."
+                        </p>
+                        <div class="mt-auto">
+                            <span class="text-xs font-bold uppercase tracking-widest text-primary">Elara S.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-background-dark border-t border-primary/10 py-16 px-6">
+            <div class="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <a href="home.html" class="block h-10">
+                            <img src="../images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
+                        </a>
+                        <h2 class="font-display text-xl font-bold tracking-widest text-primary uppercase">Velvet</h2>
+                    </div>
+                    <p class="text-sm text-slate-500 max-w-sm mb-8">
+                        Crafting a new standard in fruit-infused chocolate. Honest ingredients, expertly sourced,
+                        respectfully prepared.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-slate-100 mb-6">Explore</h4>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a class="hover:text-primary transition-colors" href="our-collection.html">Our Flavours</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="our-collection.html">Collections</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="our-story.html">Our Story</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-slate-100 mb-6">Connect</h4>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a class="hover:text-primary transition-colors" href="#">Journal</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Instagram</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="contact-us.html">Contact Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="privacy-policy.html">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="mx-auto max-w-7xl mt-16 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600">© 2024 Velvet Chocolates.
+                    All rights reserved.</span>
+                <div class="flex gap-6">
+                    <span
+                        class="material-symbols-outlined text-slate-600 hover:text-primary cursor-pointer text-xl">brand_awareness</span>
+                    <span
+                        class="material-symbols-outlined text-slate-600 hover:text-primary cursor-pointer text-xl">public</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const toast = document.createElement('div');
+                toast.className = 'fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-[#1E1A14] border border-[#C59F59] text-[#C59F59] px-8 py-4 rounded-xl shadow-2xl font-bold text-center transition-all duration-500 opacity-0 transform translate-y-4';
+                toast.textContent = 'Added to Box!';
+                document.body.appendChild(toast);
+
+                requestAnimationFrame(() => {
+                    toast.style.opacity = '1';
+                    toast.style.transform = 'translate(-50%, 0)';
+                });
+
+                setTimeout(() => {
+                    window.location.href = 'checkout.html';
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Velvet Chocolates</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c59f59",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1e1a14",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+<div class="mx-auto flex max-w-7xl items-center justify-between">
+<div class="flex items-center gap-3">
+<a href="home.html" class="block h-10">
+<img src="../images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
+</a>
+<h2 class="font-display text-xl font-bold tracking-widest text-primary uppercase">Velvet</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors" href="home.html">Home</a>
+<a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors" href="our-collection.html">Chocolates</a>
+<a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors" href="our-collection.html">Shop</a>
+<a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors" href="our-story.html">Our Story</a>
+<a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors" href="contact-us.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<a href="checkout.html" class="flex items-center justify-center rounded bg-primary/10 p-2 text-primary hover:bg-primary hover:text-background-dark transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+</a>
+<a href="my-account.html" class="h-8 w-8 rounded-full bg-primary/20 border border-primary/30 overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="Portrait of a person profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyEktfGtFaxoReKL0kH6uTswf6LVP-WP-dyqHXOSOOT7iwwR02FpWbaQm0-C6HKeGTpN9x6NFlxIqJsvQPgVwtyXqm3SnxGuPlwINsxL4HBK_7YjmLIGh3wRlQq7bdXvDypwdgV8CBTG3AaUSnEQCSFAw2dz2duib4-ruipw7C-ixVf_adoRVGDZkYgP3t6-ZOBiGzDE1XBDbTlRe4XGsD2M4AlRayK-MJ0aOnc3wHlyMvfw3fYcheWpVSpU4ONyayIrxE1AUayT8"/>
+</a>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative h-[409px] w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-background-dark/90 z-10"></div>
+<img class="h-full w-full object-cover" data-alt="Macro photography of artisanal dark chocolate truffles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEewdJ4YH2rwTQEEt_HfTBuNaPdwPgC1QBM7F5h3kpQeULi7DzHGuobV2KqxjAbYfoL-rFYxin77fysmFHCNkeopDlOVwhM2m9qdG9FOO8PSqrAuww90gkyGjKjr-ctL2St5aZ3hfLmYl0L0u_iDkfx1MB3CrOumK8iu-Cw0o6jRx7V8Pa-YqJKv4476nWXE-s67UWEmo56YKxQ0UlceZXCEQq6UqQSlItgIgzUC2etm4EOn3C_FQAJCWxiCCv8OHxpd-CorHwgH8"/>
+<div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
+<h1 class="font-display text-5xl md:text-6xl font-bold text-slate-100 mb-4">Connect With Us</h1>
+<p class="max-w-xl text-slate-300 text-lg">Indulge your senses. Reach out for bespoke orders, inquiries, or to share your velvet experience.</p>
+</div>
+</section>
+<!-- Contact & Form Grid -->
+<section class="mx-auto max-w-7xl px-6 py-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Contact Info & Callout -->
+<div class="flex flex-col gap-10">
+<div>
+<h2 class="font-display text-3xl font-bold text-primary mb-6">Get in Touch</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">Our master chocolatiers are always ready to assist you. Whether it's a specific dietary requirement or a custom flavor profile, we are here to listen.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-sm font-semibold uppercase tracking-wider text-primary">Email Us</p>
+<p class="text-lg">hello@velvet-chocolates.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-sm font-semibold uppercase tracking-wider text-primary">Call Us</p>
+<p class="text-lg">+91 98100 00000</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="text-sm font-semibold uppercase tracking-wider text-primary">Store Hours</p>
+<p class="text-base">Monday – Saturday: 10:00 AM – 8:00 PM</p>
+<p class="text-base text-slate-500">Sunday: 11:00 AM – 6:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Corporate Gifting Callout -->
+<div class="rounded-xl border border-primary/30 bg-primary/5 p-8 relative overflow-hidden group">
+<div class="absolute -right-8 -top-8 text-primary/10 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-9xl">featured_seasonal_and_gifts</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-primary mb-3">Corporate Gifting</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6">Elevate your brand with our premium artisanal boxes. Customized branding and nationwide shipping available for luxury corporate tokens.</p>
+<a class="inline-flex items-center gap-2 font-semibold text-primary hover:underline" href="#">
+                                Explore Gifting Solutions
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/20 p-8 shadow-xl">
+<form class="flex flex-col gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Your Name</label>
+<input class="rounded-lg border-slate-300 dark:border-primary/20 bg-transparent p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none text-slate-900 dark:text-slate-100" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Email Address</label>
+<input class="rounded-lg border-slate-300 dark:border-primary/20 bg-transparent p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none text-slate-900 dark:text-slate-100" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Subject</label>
+<select class="rounded-lg border-slate-300 dark:border-primary/20 bg-background-light dark:bg-background-dark p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none text-slate-900 dark:text-slate-100 appearance-none">
+<option>General Inquiry</option>
+<option>Bespoke Order</option>
+<option>Corporate Gifting</option>
+<option>Feedback &amp; Suggestions</option>
+<option>Event Catering</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Message</label>
+<textarea class="rounded-lg border-slate-300 dark:border-primary/20 bg-transparent p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none text-slate-900 dark:text-slate-100" placeholder="How can we help you today?" rows="5"></textarea>
+</div>
+<button class="w-full rounded-lg bg-primary py-4 font-bold text-background-dark hover:brightness-110 transition-all uppercase tracking-widest text-sm" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="w-full bg-primary/5 py-20">
+<div class="mx-auto max-w-7xl px-6">
+<div class="flex flex-col md:flex-row items-end justify-between mb-10 gap-6">
+<div>
+<span class="text-primary font-semibold tracking-widest uppercase text-xs">Our Presence</span>
+<h2 class="font-display text-4xl font-bold mt-2">Visit Our Boutique</h2>
+</div>
+<div class="text-right">
+<p class="text-lg font-medium">Bodh Gaya Main Rd, Gaya</p>
+<p class="text-slate-500">Bihar 824231, India</p>
+</div>
+</div>
+<div class="relative h-[500px] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-2xl">
+<!-- Simulated Map View -->
+<div class="absolute inset-0 bg-[#242424]" data-location="Gaya, Bihar" style="">
+<img class="h-full w-full object-cover opacity-40" data-alt="Stylized dark minimalist map showing city streets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Wj1X7kRY2H2nD9KXlmea0teDuJQrbC8B-ueL9faYAnKSMkA1pmjdXPRCRo23nn0mer57mas656wRoIQsPzbpFTHB90jQo1Vf-fRvatdbhAZCj_cY1_bZLLgXic1nbOIrzaArHT5qPlqMFa_uT6YrgZ7YTCu7hTBylAdxSADqrcUOA2tUvCnK7r5fLmFOX6Hq2JT3mVwskQdCmeU6cBroEhpneU_umzKtQe6odSt7szSXzP3zMyTOfyy7NTEgdQKOi5daycUHk7g"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-primary text-background-dark px-4 py-2 rounded shadow-lg whitespace-nowrap font-bold text-xs uppercase tracking-tighter">
+                                        Velvet Chocolates Boutique
+                                        <div class="absolute bottom-[-6px] left-1/2 -translate-x-1/2 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-primary"></div>
+</div>
+<span class="material-symbols-outlined text-primary text-5xl animate-pulse drop-shadow-[0_0_10px_rgba(197,159,89,0.8)]">location_on</span>
+</div>
+</div>
+</div>
+<!-- Map Controls -->
+<div class="absolute bottom-6 right-6 flex flex-col gap-2">
+<button class="h-10 w-10 bg-background-dark border border-primary/20 rounded flex items-center justify-center text-primary hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="h-10 w-10 bg-background-dark border border-primary/20 rounded flex items-center justify-center text-primary hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-primary/20 py-12 px-6 lg:px-20 bg-background-dark text-slate-400">
+<div class="mx-auto max-w-7xl flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<a href="home.html" class="block h-10">
+<img src="../images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
+</a>
+<h2 class="font-display text-lg font-bold text-slate-100">Velvet Chocolates</h2>
+</div>
+<div class="flex gap-8 text-sm">
+<a class="hover:text-primary transition-colors" href="privacy-policy.html">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Shipping Info</a>
+</div>
+<div class="flex gap-4">
+<a class="h-10 w-10 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="h-10 w-10 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">camera</span>
+</a>
+</div>
+</div>
+<p class="text-center mt-12 text-xs tracking-widest uppercase opacity-50">© 2024 Velvet Chocolates Artisanal Lab. All Rights Reserved.</p>
+</footer>
+</div>
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('button[type="submit"]');
+        const originalText = btn.textContent;
+        
+        // Change button state to "Sending..."
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+        btn.style.opacity = '0.7';
+
+        // Simulate network delay
+        setTimeout(() => {
+            // Success State
+            btn.textContent = 'Message Sent!';
+            btn.style.backgroundColor = '#C59F59';
+            btn.style.color = '#1E1A14';
+            
+            // Show Toast
+            showToast('Thank you! Your message has been sent successfully. We will email you shortly.');
+            
+            // Reset form
+            this.reset();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.textContent = originalText;
+                btn.style.backgroundColor = '';
+                btn.style.color = '';
+                btn.style.opacity = '';
+            }, 3000);
+        }, 1500);
+    });
+
+    function showToast(message) {
+        const toast = document.createElement('div');
+        toast.className = 'fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-[#1E1A14] border border-[#C59F59] text-[#C59F59] px-8 py-4 rounded-xl shadow-2xl animate-fade-in-up font-bold tracking-tight text-center max-w-[90vw]';
+        toast.textContent = message;
+        document.body.appendChild(toast);
+        
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => toast.remove(), 500);
+        }, 4000);
+    }
+</script>
+
+<style>
+    @keyframes fade-in-up {
+        from { transform: translate(-50%, 20px); opacity: 0; }
+        to { transform: translate(-50%, 0); opacity: 1; }
+    }
+    .animate-fade-in-up {
+        animation: fade-in-up 0.4s ease-out forwards;
+    }
+</style>
+</body></html>
