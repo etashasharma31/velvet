@@ -44,7 +44,7 @@
     <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
         <div class="layout-container flex h-full grow flex-col">
             <header
-                class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+                class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-dark/40 backdrop-blur-md px-6 md:px-20 py-4">
                 <div class="mx-auto flex max-w-7xl items-center justify-between">
                     <div class="flex items-center gap-3">
                         <a href="index.html" class="block h-10">
@@ -58,19 +58,17 @@
                         <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
                             href="our-collection.html">Chocolates</a>
                         <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
-                            href="our-collection.html">Shop</a>
-                        <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
                             href="our-story.html">Our Story</a>
                         <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
                             href="contact-us.html">Contact</a>
                     </nav>
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-6">
                         <a href="checkout.html"
-                            class="flex items-center justify-center rounded bg-primary/10 p-2 text-primary hover:bg-primary hover:text-background-dark transition-all">
+                            class="flex items-center justify-center text-slate-300 hover:text-primary transition-colors">
                             <span class="material-symbols-outlined">shopping_bag</span>
                         </a>
                         <a href="my-account.html"
-                            class="h-8 w-8 rounded-full bg-primary/20 border border-primary/30 overflow-hidden">
+                            class="h-8 w-8 rounded-full border border-slate-300/20 overflow-hidden hover:border-primary transition-all">
                             <img class="h-full w-full object-cover" data-alt="Portrait of a person profile"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyEktfGtFaxoReKL0kH6uTswf6LVP-WP-dyqHXOSOOT7iwwR02FpWbaQm0-C6HKeGTpN9x6NFlxIqJsvQPgVwtyXqm3SnxGuPlwINsxL4HBK_7YjmLIGh3wRlQq7bdXvDypwdgV8CBTG3AaUSnEQCSFAw2dz2duib4-ruipw7C-ixVf_adoRVGDZkYgP3t6-ZOBiGzDE1XBDbTlRe4XGsD2M4AlRayK-MJ0aOnc3wHlyMvfw3fYcheWpVSpU4ONyayIrxE1AUayT8" />
                         </a>
@@ -94,123 +92,219 @@
                     </div>
                 </section>
                 <!-- Navigation Tabs -->
-                <div class="flex border-b border-primary/20 mb-8 overflow-x-auto no-scrollbar">
-                    <button
-                        class="px-6 py-3 border-b-2 border-primary text-primary font-bold whitespace-nowrap">Overview</button>
-                    <button
-                        class="px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors whitespace-nowrap">Order
+                <div class="flex border-b border-primary/20 mb-8 overflow-x-auto no-scrollbar" id="account-tabs">
+                    <button data-tab="overview"
+                        class="tab-btn px-6 py-3 border-b-2 border-primary text-primary font-bold whitespace-nowrap">Overview</button>
+                    <button data-tab="orders"
+                        class="tab-btn px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors whitespace-nowrap">Order
                         History</button>
-                    <button
-                        class="px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors whitespace-nowrap">Saved
+                    <button data-tab="favorites"
+                        class="tab-btn px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors whitespace-nowrap">Saved
                         Favourites</button>
-                    <button
-                        class="px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors whitespace-nowrap">Settings</button>
+                    <button data-tab="settings"
+                        class="tab-btn px-6 py-3 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors whitespace-nowrap">Settings</button>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <!-- Left Side: Main Content -->
-                    <div class="lg:col-span-2 space-y-8">
-                        <!-- Order Again Nudge -->
-                        <div class="bg-primary/5 rounded-xl p-6 border border-primary/20">
-                            <h3 class="font-display text-xl font-bold mb-4 flex items-center gap-2">
-                                <span class="material-symbols-outlined text-primary">replay</span>
-                                Order Again
-                            </h3>
-                            <div class="flex flex-col sm:flex-row gap-6 items-center">
-                                <div class="w-full sm:w-48 h-32 bg-center bg-no-repeat bg-cover rounded-lg"
-                                    data-alt="Dark Sea Salt Truffles with gold dust"
-                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5y7H7ZBuvHwAo2M-pzm_6WiO0QKAn6uPsdCKKxIJRRPbNRErstUSlekaoay3pQ7D1t8lKNewDikeiY3Dj-saECuRDlwzg5QMojNTAKCRALh3Y3tkzTHmVx1FznEb0c7_l-lULkLsON3I5CgN3h8smbMT2fntJt_WWObzamVZPXLZN0NypY8ELf95iFm_88aGrBSzRSvW-_wIZf3l88LcoABls5GDGyOvIv_kfTp58mLwdwqqTgjgKgf8DXcnh6ufCKUqUyiihZBw");'>
+
+                <!-- Tab Sections -->
+                <div id="account-content">
+                    <!-- Overview Section -->
+                    <div id="overview-tab" class="tab-content">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            <!-- Left Side: Main Content -->
+                            <div class="lg:col-span-2 space-y-8">
+                                <!-- Order Again Nudge -->
+                                <div class="bg-primary/5 rounded-xl p-6 border border-primary/20">
+                                    <h3 class="font-display text-xl font-bold mb-4 flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary">replay</span>
+                                        Order Again
+                                    </h3>
+                                    <div class="flex flex-col sm:flex-row gap-6 items-center">
+                                        <div class="w-full sm:w-48 h-32 bg-center bg-no-repeat bg-cover rounded-lg"
+                                            data-alt="Dark Sea Salt Truffles with gold dust"
+                                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5y7H7ZBuvHwAo2M-pzm_6WiO0QKAn6uPsdCKKxIJRRPbNRErstUSlekaoay3pQ7D1t8lKNewDikeiY3Dj-saECuRDlwzg5QMojNTAKCRALh3Y3tkzTHmVx1FznEb0c7_l-lULkLsON3I5CgN3h8smbMT2fntJt_WWObzamVZPXLZN0NypY8ELf95iFm_88aGrBSzRSvW-_wIZf3l88LcoABls5GDGyOvIv_kfTp58mLwdwqqTgjgKgf8DXcnh6ufCKUqUyiihZBw");'>
+                                        </div>
+                                        <div class="flex-1 text-center sm:text-left">
+                                            <h4 class="text-lg font-bold mb-1">Dark Sea Salt Truffles</h4>
+                                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">You last indulged in
+                                                these 2 weeks ago.</p>
+                                            <button
+                                                class="bg-primary text-background-dark px-6 py-2 rounded-lg font-bold hover:opacity-90 transition-opacity inline-flex items-center gap-2 add-to-cart">
+                                                <span class="material-symbols-outlined text-sm">shopping_cart</span>
+                                                Add to Cart — $32.00
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="flex-1 text-center sm:text-left">
-                                    <h4 class="text-lg font-bold mb-1">Dark Sea Salt Truffles</h4>
-                                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">You last indulged in
-                                        these 2 weeks ago.</p>
-                                    <button
-                                        class="bg-primary text-background-dark px-6 py-2 rounded-lg font-bold hover:opacity-90 transition-opacity inline-flex items-center gap-2 add-to-cart">
-                                        <span class="material-symbols-outlined text-sm">shopping_cart</span>
-                                        Add to Cart — $32.00
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Account Overview Grid -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div
-                                class="p-5 bg-background-light dark:bg-slate-800/40 rounded-xl border border-primary/10">
-                                <span class="material-symbols-outlined text-primary mb-3">location_on</span>
-                                <h4 class="font-bold mb-2">Default Shipping</h4>
-                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                                    742 Evergreen Terrace<br />
-                                    Springfield, OR 97403<br />
-                                    United States
-                                </p>
-                                <button
-                                    class="mt-4 text-xs font-bold text-primary uppercase tracking-wider hover:underline">Edit
-                                    Address</button>
-                            </div>
-                            <div
-                                class="p-5 bg-background-light dark:bg-slate-800/40 rounded-xl border border-primary/10">
-                                <span class="material-symbols-outlined text-primary mb-3">credit_card</span>
-                                <h4 class="font-bold mb-2">Payment Method</h4>
-                                <div class="flex items-center gap-3">
+                                <!-- Account Overview Grid -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div
-                                        class="w-10 h-6 bg-slate-700 rounded flex items-center justify-center text-[10px] font-bold">
-                                        VISA</div>
-                                    <p class="text-sm text-slate-500 dark:text-slate-400">Ending in 4242</p>
+                                        class="p-5 bg-background-light dark:bg-slate-800/40 rounded-xl border border-primary/10">
+                                        <span class="material-symbols-outlined text-primary mb-3">location_on</span>
+                                        <h4 class="font-bold mb-2">Default Shipping</h4>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                                            742 Evergreen Terrace<br />
+                                            Springfield, OR 97403<br />
+                                            United States
+                                        </p>
+                                        <button
+                                            class="mt-4 text-xs font-bold text-primary uppercase tracking-wider hover:underline settings-trigger">Edit
+                                            Address</button>
+                                    </div>
+                                    <div
+                                        class="p-5 bg-background-light dark:bg-slate-800/40 rounded-xl border border-primary/10">
+                                        <span class="material-symbols-outlined text-primary mb-3">credit_card</span>
+                                        <h4 class="font-bold mb-2">Payment Method</h4>
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-10 h-6 bg-slate-700 rounded flex items-center justify-center text-[10px] font-bold">
+                                                VISA</div>
+                                            <p class="text-sm text-slate-500 dark:text-slate-400">Ending in 4242</p>
+                                        </div>
+                                        <p class="text-xs text-slate-500 mt-1">Expires 12/26</p>
+                                        <button
+                                            class="mt-4 text-xs font-bold text-primary uppercase tracking-wider hover:underline settings-trigger">Update
+                                            Card</button>
+                                    </div>
                                 </div>
-                                <p class="text-xs text-slate-500 mt-1">Expires 12/26</p>
-                                <button
-                                    class="mt-4 text-xs font-bold text-primary uppercase tracking-wider hover:underline">Update
-                                    Card</button>
+                            </div>
+
+                            <!-- Right Side: Sidebar Stats/Favorites -->
+                            <div class="space-y-6">
+                                <div class="bg-background-light dark:bg-slate-800/40 rounded-xl p-6 border border-primary/10">
+                                    <h4 class="font-display font-bold mb-4">Account Stats</h4>
+                                    <div class="space-y-4">
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-sm text-slate-500">Total Orders</span>
+                                            <span class="font-bold">24</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-sm text-slate-500">Loyalty Points</span>
+                                            <span class="font-bold text-primary">1,250</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-sm text-slate-500">Next Reward</span>
+                                            <span class="text-xs px-2 py-0.5 rounded bg-primary/20 text-primary">15% Off</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-background-light dark:bg-slate-800/40 rounded-xl p-6 border border-primary/10">
+                                    <h4 class="font-display font-bold mb-4">Quick Settings</h4>
+                                    <ul class="space-y-3">
+                                        <li>
+                                            <a class="flex items-center gap-3 text-sm text-slate-500 hover:text-primary transition-colors settings-trigger"
+                                                href="#">
+                                                <span class="material-symbols-outlined text-sm">lock</span>
+                                                Security &amp; Password
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="flex items-center gap-3 text-sm text-slate-500 hover:text-primary transition-colors settings-trigger"
+                                                href="#">
+                                                <span class="material-symbols-outlined text-sm">mail</span>
+                                                Email Preferences
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="flex items-center gap-3 text-sm text-slate-500 hover:text-primary transition-colors text-red-400 logout-btn"
+                                                href="#">
+                                                <span class="material-symbols-outlined text-sm">logout</span>
+                                                Sign Out
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Right Side: Sidebar Stats/Favorites -->
-                    <div class="space-y-6">
-                        <div class="bg-background-light dark:bg-slate-800/40 rounded-xl p-6 border border-primary/10">
-                            <h4 class="font-display font-bold mb-4">Account Stats</h4>
-                            <div class="space-y-4">
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm text-slate-500">Total Orders</span>
-                                    <span class="font-bold">24</span>
+
+                    <!-- Order History Section -->
+                    <div id="orders-tab" class="tab-content hidden space-y-6">
+                        <h2 class="font-display text-2xl font-bold mb-4">Your Past Indulgences</h2>
+                        <div class="space-y-4">
+                            <!-- Order 1 -->
+                            <div class="bg-background-light dark:bg-slate-800/40 rounded-xl p-6 border border-primary/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-20 h-20 bg-primary/10 rounded-lg flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-primary text-4xl">box</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Order #VLVT-8923</h4>
+                                        <p class="text-xs text-slate-500">Placed on March 12, 2024</p>
+                                        <span class="inline-block mt-2 px-2 py-0.5 rounded-full bg-green-500/10 text-green-500 text-[10px] font-bold uppercase">Delivered</span>
+                                    </div>
                                 </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm text-slate-500">Loyalty Points</span>
-                                    <span class="font-bold text-primary">1,250</span>
+                                <div class="text-right">
+                                    <p class="font-bold text-lg">$124.00</p>
+                                    <button class="mt-2 text-primary text-xs font-bold uppercase tracking-widest hover:underline">View Details</button>
                                 </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm text-slate-500">Next Reward</span>
-                                    <span class="text-xs px-2 py-0.5 rounded bg-primary/20 text-primary">15% Off</span>
+                            </div>
+                            <!-- Order 2 -->
+                            <div class="bg-background-light dark:bg-slate-800/40 rounded-xl p-6 border border-primary/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-20 h-20 bg-primary/10 rounded-lg flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-primary text-4xl">box</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Order #VLVT-8741</h4>
+                                        <p class="text-xs text-slate-500">Placed on Feb 28, 2024</p>
+                                        <span class="inline-block mt-2 px-2 py-0.5 rounded-full bg-green-500/10 text-green-500 text-[10px] font-bold uppercase">Delivered</span>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <p class="font-bold text-lg">$68.50</p>
+                                    <button class="mt-2 text-primary text-xs font-bold uppercase tracking-widest hover:underline">View Details</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-background-light dark:bg-slate-800/40 rounded-xl p-6 border border-primary/10">
-                            <h4 class="font-display font-bold mb-4">Quick Settings</h4>
-                            <ul class="space-y-3">
-                                <li>
-                                    <a class="flex items-center gap-3 text-sm text-slate-500 hover:text-primary transition-colors"
-                                        href="#">
-                                        <span class="material-symbols-outlined text-sm">lock</span>
-                                        Security &amp; Password
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="flex items-center gap-3 text-sm text-slate-500 hover:text-primary transition-colors"
-                                        href="#">
-                                        <span class="material-symbols-outlined text-sm">mail</span>
-                                        Email Preferences
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="flex items-center gap-3 text-sm text-slate-500 hover:text-primary transition-colors text-red-400"
-                                        href="#">
-                                        <span class="material-symbols-outlined text-sm">logout</span>
-                                        Sign Out
-                                    </a>
-                                </li>
-                            </ul>
+                    </div>
+
+                    <!-- Favourites Section -->
+                    <div id="favorites-tab" class="tab-content hidden">
+                        <h2 class="font-display text-2xl font-bold mb-6">Curated Favorites</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Favorite items will go here, can reuse existing card style -->
+                            <div class="group cursor-pointer">
+                                <div class="aspect-square bg-center bg-cover rounded-xl mb-3 overflow-hidden" data-alt="Selection of ruby chocolates" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATEMG2rcOjc8veXMz9ylVEeZShg2spyJ5jR64ur-b3yilXS8qfBdPO4x0luxCcBdJwR__-7Q-G5kbCrvHucpksQKsUrTikQLm8itQvYL0UF_qCbnSh83LZPTokw418a5mYn8i8Rkn93LDS0ILUZn8XRO-rUstTDQq-FDrxdq5nXCxXUYDJXPQSustJHat4C0iZ9KvHDTV-5Z2zmHq4x6efHQ4pX18K76R2fYMHLQbY7PxZ3bU45hUGDrqj16bfkKkrkwPmmnn_Gn4");'></div>
+                                <p class="font-bold text-sm">Ruby Rose Collection</p>
+                                <p class="text-primary text-xs font-medium">$45.00</p>
+                            </div>
+                            <div class="group cursor-pointer">
+                                <div class="aspect-square bg-center bg-cover rounded-xl mb-3 overflow-hidden" data-alt="Milk chocolate hazelnut pralines" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQFCqbyZGptnzRYwHELH8rTek6wCq-ts3GOFdXIRvyOuKVLA4VBfvXGRxMGQRqnzR1MQtID5ot1OIkXWKGrqaOXYtggwuQrfBeBfnBIZtydy_wfbdwJyunUrJRIAgo4xhzsRlFJP0fXBHDa2TDY6Swa2Z9nD-CYmXrSlACXEi0xWoK29Q_mUL47uG_BITprr5rQDTfZJt2z84sQQ5AAIXOjycsgs-kva1965tqbSQS2pKFy8XwErhJilrPx5S_uQqQCyfTG0CxJ5U");'></div>
+                                <p class="font-bold text-sm">Hazelnut Pralines</p>
+                                <p class="text-primary text-xs font-medium">$28.00</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                    <!-- Settings Section -->
+                    <div id="settings-tab" class="tab-content hidden space-y-8">
+                        <div>
+                            <h2 class="font-display text-2xl font-bold mb-4">Account Settings</h2>
+                            <div class="bg-background-light dark:bg-slate-800/40 rounded-xl p-8 border border-primary/10 space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label class="text-xs font-bold uppercase tracking-widest text-slate-500">First Name</label>
+                                        <input type="text" value="Velvet" class="w-full bg-background-dark/50 border border-primary/20 rounded px-4 py-2 text-sm focus:border-primary outline-none">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-xs font-bold uppercase tracking-widest text-slate-500">Last Name</label>
+                                        <input type="text" value="Member" class="w-full bg-background-dark/50 border border-primary/20 rounded px-4 py-2 text-sm focus:border-primary outline-none">
+                                    </div>
+                                    <div class="space-y-2 md:col-span-2">
+                                        <label class="text-xs font-bold uppercase tracking-widest text-slate-500">Email Address</label>
+                                        <input type="email" value="v@example.com" class="w-full bg-background-dark/50 border border-primary/20 rounded px-4 py-2 text-sm focus:border-primary outline-none">
+                                    </div>
+                                </div>
+                                <button class="bg-primary text-background-dark px-8 py-3 rounded-lg font-bold hover:scale-105 transition-transform">Save Changes</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl font-bold mb-4">Security</h3>
+                            <div class="bg-background-light dark:bg-slate-800/40 rounded-xl p-8 border border-primary/10">
+                                <button class="border border-primary/30 text-primary px-6 py-2 rounded font-bold text-sm hover:bg-primary/10 transition-colors">Change Password</button>
+                            </div>
+                        </div>
+                    </div>
                 <!-- Saved Favorites Preview -->
                 <section class="mt-16">
                     <div class="flex justify-between items-end mb-6">
@@ -289,6 +383,62 @@
         </div>
     </div>
     <script>
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        function switchTab(tabId) {
+            tabContents.forEach(content => {
+                content.classList.add('hidden');
+            });
+            tabBtns.forEach(btn => {
+                btn.classList.remove('border-primary', 'text-primary');
+                btn.classList.add('border-transparent', 'text-slate-500');
+            });
+
+            const activeTab = document.getElementById(`${tabId}-tab`);
+            const activeBtn = document.querySelector(`[data-tab="${tabId}"]`);
+
+            if (activeTab && activeBtn) {
+                activeTab.classList.remove('hidden');
+                activeBtn.classList.remove('border-transparent', 'text-slate-500');
+                activeBtn.classList.add('border-primary', 'text-primary');
+            }
+        }
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchTab(btn.dataset.tab);
+            });
+        });
+
+        // Quick Links Interactivity
+        document.querySelectorAll('.settings-trigger').forEach(el => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchTab('settings');
+            });
+        });
+
+        // Sign Out Logic
+        document.querySelectorAll('.logout-btn').forEach(el => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                const toast = document.createElement('div');
+                toast.className = 'fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-[#1E1A14] border border-[#C59F59] text-[#C59F59] px-8 py-4 rounded-xl shadow-2xl font-bold text-center transition-all duration-500 opacity-0 transform translate-y-4';
+                toast.textContent = 'Signing Out...';
+                document.body.appendChild(toast);
+                
+                requestAnimationFrame(() => {
+                    toast.style.opacity = '1';
+                    toast.style.transform = 'translate(-50%, 0)';
+                });
+
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1000);
+            });
+        });
+
         document.querySelectorAll('.add-to-cart').forEach(btn => {
             btn.addEventListener('click', function () {
                 const toast = document.createElement('div');

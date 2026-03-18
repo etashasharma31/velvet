@@ -35,7 +35,7 @@
 </head>
 <body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100">
 <div class="relative flex min-h-screen flex-col overflow-x-hidden">
-<header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+<header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-dark/40 backdrop-blur-md px-6 md:px-20 py-4">
 <div class="mx-auto flex max-w-7xl items-center justify-between">
 <div class="flex items-center gap-3">
 <a href="index.html" class="block h-10">
@@ -46,15 +46,14 @@
 <nav class="hidden md:flex items-center gap-10">
 <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors" href="index.html">Home</a>
 <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors" href="our-collection.html">Chocolates</a>
-<a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors" href="our-collection.html">Shop</a>
 <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors" href="our-story.html">Our Story</a>
 <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors" href="contact-us.html">Contact</a>
 </nav>
-<div class="flex items-center gap-4">
-<a href="checkout.html" class="flex items-center justify-center rounded bg-primary/10 p-2 text-primary hover:bg-primary hover:text-background-dark transition-all">
+<div class="flex items-center gap-6">
+<a href="checkout.html" class="flex items-center justify-center text-slate-300 hover:text-primary transition-colors">
 <span class="material-symbols-outlined">shopping_bag</span>
 </a>
-<a href="my-account.html" class="h-8 w-8 rounded-full bg-primary/20 border border-primary/30 overflow-hidden">
+<a href="my-account.html" class="h-8 w-8 rounded-full border border-slate-300/20 overflow-hidden hover:border-primary transition-all">
 <img class="h-full w-full object-cover" data-alt="Portrait of a person profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyEktfGtFaxoReKL0kH6uTswf6LVP-WP-dyqHXOSOOT7iwwR02FpWbaQm0-C6HKeGTpN9x6NFlxIqJsvQPgVwtyXqm3SnxGuPlwINsxL4HBK_7YjmLIGh3wRlQq7bdXvDypwdgV8CBTG3AaUSnEQCSFAw2dz2duib4-ruipw7C-ixVf_adoRVGDZkYgP3t6-ZOBiGzDE1XBDbTlRe4XGsD2M4AlRayK-MJ0aOnc3wHlyMvfw3fYcheWpVSpU4ONyayIrxE1AUayT8"/>
 </a>
 </div>
@@ -71,8 +70,8 @@
 </div>
 </section>
 <!-- Contact & Form Grid -->
-<section class="mx-auto max-w-7xl px-6 py-20">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<section class="mx-auto max-w-5xl px-6 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 <!-- Contact Info & Callout -->
 <div class="flex flex-col gap-10">
 <div>
@@ -123,40 +122,58 @@
 </div>
 </div>
 <!-- Contact Form -->
-<div class="rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/20 p-8 shadow-xl">
-<form class="flex flex-col gap-6">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="flex flex-col gap-2">
-<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Your Name</label>
-<input class="rounded-lg border-slate-300 dark:border-primary/20 bg-transparent p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none text-slate-900 dark:text-slate-100" placeholder="John Doe" type="text"/>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Email Address</label>
-<input class="rounded-lg border-slate-300 dark:border-primary/20 bg-transparent p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none text-slate-900 dark:text-slate-100" placeholder="john@example.com" type="email"/>
-</div>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Subject</label>
-<select class="rounded-lg border-slate-300 dark:border-primary/20 bg-background-light dark:bg-background-dark p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none text-slate-900 dark:text-slate-100 appearance-none">
-<option>General Inquiry</option>
-<option>Bespoke Order</option>
-<option>Corporate Gifting</option>
-<option>Feedback &amp; Suggestions</option>
-<option>Event Catering</option>
-</select>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Message</label>
-<textarea class="rounded-lg border-slate-300 dark:border-primary/20 bg-transparent p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none text-slate-900 dark:text-slate-100" placeholder="How can we help you today?" rows="5"></textarea>
-</div>
-<button class="w-full rounded-lg bg-primary py-4 font-bold text-background-dark hover:brightness-110 transition-all uppercase tracking-widest text-sm" type="submit">Send Message</button>
-</form>
+<!-- Contact Form -->
+<div class="rounded-xl border-2 border-primary/30 shadow-2xl w-full relative overflow-hidden min-h-[500px] flex items-center">
+    <!-- Premium Chocolate Background -->
+    <div class="absolute inset-0 z-0">
+        <img src="assets/images/form-chocolate-bg.png" alt="Chocolate Background" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-background-dark/80 backdrop-blur-sm"></div>
+    </div>
+    
+    <form class="flex flex-col gap-6 relative z-10 w-full p-8 lg:p-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-2">
+                <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Connoisseur Name</label>
+                <input class="rounded border-primary/20 bg-background-dark/40 p-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none text-white transition-all" placeholder="e.g. Julian Vane" type="text"/>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Email Address</label>
+                <input class="rounded border-primary/20 bg-background-dark/40 p-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none text-white transition-all" placeholder="julian@velvet.com" type="email"/>
+            </div>
+        </div>
+        <div class="flex flex-col gap-2">
+            <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Your Deepest Indulgence</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <label class="cursor-pointer">
+                    <input type="radio" name="pref" class="hidden peer" checked>
+                    <div class="border border-primary/30 rounded py-3 px-1 text-center text-[10px] uppercase font-bold text-slate-400 peer-checked:bg-primary/20 peer-checked:text-primary peer-checked:border-primary transition-all backdrop-blur-md">Dark</div>
+                </label>
+                <label class="cursor-pointer">
+                    <input type="radio" name="pref" class="hidden peer">
+                    <div class="border border-primary/30 rounded py-3 px-1 text-center text-[10px] uppercase font-bold text-slate-400 peer-checked:bg-primary/20 peer-checked:text-primary peer-checked:border-primary transition-all backdrop-blur-md">Milk</div>
+                </label>
+                <label class="cursor-pointer">
+                    <input type="radio" name="pref" class="hidden peer">
+                    <div class="border border-primary/30 rounded py-3 px-1 text-center text-[10px] uppercase font-bold text-slate-400 peer-checked:bg-primary/20 peer-checked:text-primary peer-checked:border-primary transition-all backdrop-blur-md">Ruby</div>
+                </label>
+                <label class="cursor-pointer">
+                    <input type="radio" name="pref" class="hidden peer">
+                    <div class="border border-primary/30 rounded py-3 px-1 text-center text-[10px] uppercase font-bold text-slate-400 peer-checked:bg-primary/20 peer-checked:text-primary peer-checked:border-primary transition-all backdrop-blur-md">Assorted</div>
+                </label>
+            </div>
+        </div>
+        <div class="flex flex-col gap-2">
+            <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Your Inquiry</label>
+            <textarea class="rounded border-primary/20 bg-background-dark/40 p-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none text-white transition-all" placeholder="Describe your bespoke order or inquiry..." rows="4"></textarea>
+        </div>
+        <button class="w-full rounded bg-primary py-4 font-bold text-background-dark hover:scale-[1.02] transition-all uppercase tracking-[0.3em] text-[10px] shadow-lg shadow-primary/20" type="submit">Experience Velvet</button>
+    </form>
 </div>
 </div>
 </section>
 <!-- Map Section -->
-<section class="w-full bg-primary/5 py-20">
-<div class="mx-auto max-w-7xl px-6">
+<section class="w-full bg-primary/5 py-12">
+<div class="mx-auto max-w-5xl px-6">
 <div class="flex flex-col md:flex-row items-end justify-between mb-10 gap-6">
 <div>
 <span class="text-primary font-semibold tracking-widest uppercase text-xs">Our Presence</span>
@@ -169,7 +186,7 @@
 </div>
 <div class="relative h-[500px] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-2xl">
 <!-- Simulated Map View -->
-<div class="absolute inset-0 bg-[#242424]" data-location="Gaya, Bihar" style="">
+<div class="absolute inset-0 bg-[#242424]" data-location="Gaya, Bihar">
 <img class="h-full w-full object-cover opacity-40" data-alt="Stylized dark minimalist map showing city streets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Wj1X7kRY2H2nD9KXlmea0teDuJQrbC8B-ueL9faYAnKSMkA1pmjdXPRCRo23nn0mer57mas656wRoIQsPzbpFTHB90jQo1Vf-fRvatdbhAZCj_cY1_bZLLgXic1nbOIrzaArHT5qPlqMFa_uT6YrgZ7YTCu7hTBylAdxSADqrcUOA2tUvCnK7r5fLmFOX6Hq2JT3mVwskQdCmeU6cBroEhpneU_umzKtQe6odSt7szSXzP3zMyTOfyy7NTEgdQKOi5daycUHk7g"/>
 <div class="absolute inset-0 flex items-center justify-center">
 <div class="relative">
