@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login | Velvet Chocolates</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c59f59",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1e1a14",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @keyframes brightness-shine {
+            0%, 100% { filter: brightness(1) drop-shadow(0 0 0 rgba(197, 159, 89, 0)); }
+            50% { filter: brightness(1.6) drop-shadow(0 0 10px rgba(197, 159, 89, 0.4)); }
+        }
+        .bright-shine {
+            animation: brightness-shine 3s ease-in-out infinite;
+        }
+        .glass-card {
+            background: rgba(30, 26, 20, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px border-primary/20;
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-sans text-slate-100 min-h-screen flex items-center justify-center p-6 selection:bg-primary/30">
+    <!-- Background Image -->
+    <div class="fixed inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-background-dark/80 via-background-dark/95 to-background-dark"></div>
+        <img class="h-full w-full object-cover opacity-30" src="assets/images/hero-bg.jpg" alt="Dark chocolate background">
+    </div>
+
+    <div class="relative z-10 w-full max-w-md">
+        <!-- Brand Header -->
+        <div class="flex flex-col items-center gap-4 mb-10 bright-shine">
+            <a href="index.html" class="block h-16">
+                <img src="assets/images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
+            </a>
+            <h1 class="font-display text-3xl font-bold tracking-[0.3em] text-primary uppercase">Velvet</h1>
+        </div>
+
+        <!-- Login Card -->
+        <div class="glass-card rounded-2xl p-8 border border-primary/20 shadow-2xl">
+            <h2 class="font-display text-2xl font-bold mb-2 text-center">Welcome Back</h2>
+            <p class="text-slate-400 text-sm mb-8 text-center italic">Sign in to access your curated collection</p>
+
+            <form id="loginForm" class="space-y-6">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-primary mb-2">Email Address</label>
+                    <input type="email" id="email" required placeholder="name@example.com"
+                        class="w-full bg-background-dark/50 border border-primary/30 focus:border-primary focus:ring-0 rounded-lg text-slate-100 p-4 placeholder:text-slate-600 transition-all">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-primary mb-2">Password</label>
+                    <input type="password" id="password" required placeholder="••••••••"
+                        class="w-full bg-background-dark/50 border border-primary/30 focus:border-primary focus:ring-0 rounded-lg text-slate-100 p-4 placeholder:text-slate-600 transition-all">
+                </div>
+                <div class="flex items-center justify-between text-xs">
+                    <label class="flex items-center gap-2 cursor-pointer group">
+                        <input type="checkbox" class="rounded border-primary/30 text-primary focus:ring-primary bg-transparent h-4 w-4">
+                        <span class="text-slate-400 group-hover:text-primary transition-colors">Remember me</span>
+                    </label>
+                    <a href="#" class="text-primary hover:text-slate-100 transition-colors font-bold uppercase tracking-wider">Forgot Password?</a>
+                </div>
+                <button type="submit"
+                    class="w-full bg-primary hover:bg-[#d4ae6a] text-background-dark font-bold py-4 rounded-lg uppercase tracking-widest transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+                    Sign In
+                </button>
+            </form>
+
+            <div class="mt-8 text-center border-t border-primary/10 pt-6">
+                <p class="text-slate-400 text-sm">Don't have an account? 
+                    <a href="#" class="text-primary hover:underline font-bold transition-colors">Apply for Membership</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="index.html" class="inline-flex items-center gap-2 text-slate-500 hover:text-primary transition-colors text-sm uppercase tracking-widest font-bold">
+                <span class="material-symbols-outlined text-sm">arrow_back</span>
+                Back to Home
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            
+            // Mock Login Process
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('userEmail', email);
+
+            // Visual feedback
+            const btn = e.target.querySelector('button');
+            btn.textContent = 'Authenticating...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

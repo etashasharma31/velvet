@@ -46,7 +46,16 @@
         .bright-shine {
             animation: brightness-shine 3s ease-in-out infinite;
         }
+        [data-auth-only] { display: none; }
+        .is-logged-in [data-auth-only] { display: block; }
+        .is-logged-in [data-guest-only] { display: none; }
     </style>
+    <script>
+        // Immediate Auth Check before render
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100 min-h-screen">
@@ -55,11 +64,11 @@
             <header
                 class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-dark/40 backdrop-blur-md px-6 md:px-20 py-4">
                 <div class="mx-auto flex max-w-7xl items-center justify-between">
-                    <div class="flex items-center gap-3 bright-shine">
-                        <a href="index.html" class="block h-10">
+                    <div class="flex items-center gap-2 bright-shine">
+                        <a href="index.html" class="block h-8 transition-transform hover:scale-105">
                             <img src="assets/images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
                         </a>
-                        <h2 class="font-display text-xl font-bold tracking-widest text-primary uppercase">Velvet</h2>
+                        <h2 class="font-display text-lg font-bold tracking-[0.2em] text-primary uppercase">Velvet</h2>
                     </div>
                     <nav class="hidden md:flex items-center gap-10">
                         <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
@@ -96,9 +105,9 @@
             <div id="mobile-menu" class="fixed inset-0 z-[100] hidden bg-background-dark/95 backdrop-blur-xl">
                 <div class="flex flex-col h-full p-8">
                     <div class="flex items-center justify-between mb-16">
-                        <div class="flex items-center gap-3 bright-shine">
-                            <img src="assets/images/untitled-2.png" alt="Velvet Logo" class="h-10 object-contain">
-                            <h2 class="font-display text-xl font-bold tracking-widest text-primary uppercase">Velvet</h2>
+                        <div class="flex items-center gap-2 bright-shine">
+                            <img src="assets/images/untitled-2.png" alt="Velvet Logo" class="h-8 object-contain">
+                            <h2 class="font-display text-lg font-bold tracking-[0.2em] text-primary uppercase">Velvet</h2>
                         </div>
                         <button onclick="toggleMobileMenu()" class="text-primary p-2">
                             <span class="material-symbols-outlined text-3xl">close</span>
@@ -110,7 +119,7 @@
                         <a href="our-story.html" class="text-2xl font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors">Our Story</a>
                         <a href="contact-us.html" class="text-2xl font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors">Contact</a>
                     </nav>
-                    <div class="mt-auto flex gap-8 pt-8 border-t border-primary/10">
+                    <div class="mt-auto flex flex-col gap-4 pt-8 border-t border-primary/10">
                          <a href="checkout.html" class="text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined">shopping_bag</span>
                             <span class="text-xs font-bold uppercase tracking-widest">Bag</span>
@@ -119,6 +128,10 @@
                             <span class="material-symbols-outlined">person</span>
                             <span class="text-xs font-bold uppercase tracking-widest">Account</span>
                          </a>
+                         <button onclick="logout()" class="text-red-400 flex items-center gap-2 text-left">
+                            <span class="material-symbols-outlined">logout</span>
+                            <span class="text-xs font-bold uppercase tracking-widest">Logout</span>
+                         </button>
                     </div>
                 </div>
             </div>
@@ -311,7 +324,7 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             <!-- Favorite items will go here, can reuse existing card style -->
                             <div class="group cursor-pointer">
-                                <div class="aspect-square bg-center bg-cover rounded-xl mb-3 overflow-hidden" data-alt="Selection of ruby chocolates" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATEMG2rcOjc8veXMz9ylVEeZShg2spyJ5jR64ur-b3yilXS8qfBdPO4x0luxCcBdJwR__-7Q-G5kbCrvHucpksQKsUrTikQLm8itQvYL0UF_qCbnSh83LZPTokw418a5mYn8i8Rkn93LDS0ILUZn8XRO-rUstTDQq-FDrxdq5nXCxXUYDJXPQSustJHat4C0iZ9KvHDTV-5Z2zmHq4x6efHQ4pX18K76R2fYMHLQbY7PxZ3bU45hUGDrqj16bfkKkrkwPmmnn_Gn4");'></div>
+                                <div class="aspect-square bg-center bg-cover rounded-xl mb-3 overflow-hidden" data-alt="Selection of ruby chocolates" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATEMG2rcOjc8veXMz9ylVEeZShg2spyJ5jR64ur-b3yilXS8qfBdPO4x0luxCcBdJwR__-7Q-G5kbCrvHucpksQKsUrTikQLm8itQvYL0UF_qCbnSh83LZPTokw418a5mYn8i8Rkn93LDS0ILUZn8XRO-rUstTDQq-FDrxdq5nXCxXUYDJXPQSustJHat4C0iZ9KvHDTV-5Z2zmHq4x6efHQ4pX18K76R2fYMHLQbY7PxZ3bU45hUGDrqj16bfhKkrkwPmmnn_Gn4");'></div>
                                 <p class="font-bold text-sm">Ruby Rose Collection</p>
                                 <p class="text-primary text-xs font-medium">$45.00</p>
                             </div>
@@ -362,7 +375,7 @@
                         <div class="group cursor-pointer">
                             <div class="aspect-square bg-center bg-cover rounded-xl mb-3 overflow-hidden"
                                 data-alt="Selection of ruby chocolates"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATEMG2rcOjc8veXMz9ylVEeZShg2spyJ5jR64ur-b3yilXS8qfBdPO4x0luxCcBdJwR__-7Q-G5kbCrvHucpksQKsUrTikQLm8itQvYL0UF_qCbnSh83LZPTokw418a5mYn8i8Rkn93LDS0ILUZn8XRO-rUstTDQq-FDrxdq5nXCxXUYDJXPQSustJHat4C0iZ9KvHDTV-5Z2zmHq4x6efHQ4pX18K76R2fYMHLQbY7PxZ3bU45hUGDrqj16bfkKkrkwPmmnn_Gn4");'>
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATEMG2rcOjc8veXMz9ylVEeZShg2spyJ5jR64ur-b3yilXS8qfBdPO4x0luxCcBdJwR__-7Q-G5kbCrvHucpksQKsUrTikQLm8itQvYL0UF_qCbnSh83LZPTokw418a5mYn8i8Rkn93LDS0ILUZn8XRO-rUstTDQq-FDrxdq5nXCxXUYDJXPQSustJHat4C0iZ9KvHDTV-5Z2zmHq4x6efHQ4pX18K76R2fYMHLQbY7PxZ3bU45hUGDrqj16bfhKkrkwPmmnn_Gn4");'>
                                 <div
                                     class="w-full h-full bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                     <span class="material-symbols-outlined text-white">favorite</span>
@@ -413,17 +426,17 @@
             <!-- Footer -->
             <footer class="border-t border-primary/10 mt-20 py-10 px-6 bg-background-light dark:bg-background-dark/50">
                 <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div class="flex items-center gap-2 text-primary opacity-60">
-                        <a href="index.html" class="block h-10">
+                    <div class="flex items-center gap-2">
+                        <a href="index.html" class="block h-6">
                             <img src="assets/images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
                         </a>
-                        <span class="font-display font-bold">Velvet Chocolates</span>
+                        <span class="text-base font-bold tracking-wide uppercase">Velvet</span>
                     </div>
-                    <div class="flex gap-8 text-sm text-slate-500">
-                        <a class="hover:text-primary" href="#">Help Center</a>
-                        <a class="hover:text-primary" href="privacy-policy.html">Privacy Policy</a>
-                        <a class="hover:text-primary" href="#">Terms of Service</a>
-                    </div>
+                    <ul class="flex gap-6 text-xs text-slate-500 font-medium">
+                        <li><a class="hover:text-primary transition-colors uppercase tracking-wider" href="privacy-policy.html">Privacy</a></li>
+                        <li><a class="hover:text-primary transition-colors uppercase tracking-wider" href="#">Terms</a></li>
+                        <li><a class="hover:text-primary transition-colors uppercase tracking-wider" href="our-story.html">Story</a></li>
+                    </ul>
                     <p class="text-xs text-slate-500">© 2024 Velvet Chocolates. All rights reserved.</p>
                 </div>
             </footer>
@@ -481,10 +494,27 @@
                 });
 
                 setTimeout(() => {
-                    window.location.href = 'index.html';
+                    logout();
                 }, 1000);
             });
         });
+
+        function checkAuth() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            if (isLoggedIn) {
+                document.body.classList.add('is-logged-in');
+            } else {
+                window.location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userEmail');
+            window.location.href = 'index.html';
+        }
+
+        checkAuth();
 
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');

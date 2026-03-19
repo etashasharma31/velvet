@@ -58,6 +58,9 @@
         .bright-shine {
             animation: brightness-shine 3s ease-in-out infinite;
         }
+        [data-auth-only] { display: none; }
+        .is-logged-in [data-auth-only] { display: block; }
+        .is-logged-in [data-guest-only] { display: none; }
     </style>
 </head>
 
@@ -66,11 +69,11 @@
         <header
             class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-dark/40 backdrop-blur-md px-6 md:px-20 py-4">
             <div class="mx-auto flex max-w-7xl items-center justify-between">
-                <div class="flex items-center gap-3 bright-shine">
-                    <a href="index.html" class="block h-10">
+                <div class="flex items-center gap-2 bright-shine">
+                    <a href="index.html" class="block h-8 transition-transform hover:scale-105">
                         <img src="assets/images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
                     </a>
-                    <h2 class="font-display text-xl font-bold tracking-widest text-primary uppercase">Velvet</h2>
+                    <h2 class="font-display text-lg font-bold tracking-[0.2em] text-primary uppercase">Velvet</h2>
                 </div>
                 <nav class="hidden md:flex items-center gap-10">
                     <a class="text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors"
@@ -89,7 +92,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                         </svg>
                     </a>
-                    <a href="my-account.html"
+                    <a href="login.html" id="profileLink"
                         class="h-8 w-8 flex items-center justify-center text-primary hover:scale-110 transition-all">
                         <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
@@ -121,15 +124,19 @@
                     <a href="our-story.html" class="text-2xl font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors">Our Story</a>
                     <a href="contact-us.html" class="text-2xl font-bold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors">Contact</a>
                 </nav>
-                <div class="mt-auto flex gap-8 pt-8 border-t border-primary/10">
+                <div class="mt-auto flex flex-col gap-4 pt-8 border-t border-primary/10">
                      <a href="checkout.html" class="text-primary flex items-center gap-2">
                         <span class="material-symbols-outlined">shopping_bag</span>
                         <span class="text-xs font-bold uppercase tracking-widest">Bag</span>
                      </a>
-                     <a href="my-account.html" class="text-primary flex items-center gap-2">
+                     <a href="login.html" id="mobileAccountLink" class="text-primary flex items-center gap-2">
                         <span class="material-symbols-outlined">person</span>
                         <span class="text-xs font-bold uppercase tracking-widest">Account</span>
                      </a>
+                     <button onclick="logout()" data-auth-only class="text-red-400 flex items-center gap-2 text-left">
+                        <span class="material-symbols-outlined">logout</span>
+                        <span class="text-xs font-bold uppercase tracking-widest">Logout</span>
+                     </button>
                 </div>
             </div>
         </div>
@@ -143,12 +150,12 @@
                     src="assets/images/hero-bg.jpg" />
             </div>
             <div class="relative z-10 flex max-w-4xl flex-col items-center text-center">
-                <span class="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-primary/80">Handcrafted
-                    Fruit-Infused Chocolate · Made with Real Ingredients</span>
-                <h1 class="font-display text-7xl md:text-9xl font-bold tracking-tighter text-primary mb-8">VELVET</h1>
-                <p class="font-display text-xl md:text-3xl italic text-slate-200 mb-4">Real Fruit. Real Cocoa. Real
+                <span class="mb-5 text-[10px] font-bold uppercase tracking-[0.4em] text-primary/70">Handcrafted
+                    Fruit-Infused Chocolate · Real Ingredients</span>
+                <h1 class="font-display text-5xl md:text-7xl font-bold tracking-tight text-primary mb-6">VELVET</h1>
+                <p class="font-display text-lg md:text-2xl italic text-slate-200/90 mb-4">Real Fruit. Real Cocoa. Real
                     Feeling.</p>
-                <p class="max-w-xl text-sm md:text-base leading-relaxed text-slate-400 mb-12">
+                <p class="max-w-md text-xs md:text-sm leading-relaxed text-slate-400/80 mb-10">
                     Eight flavours. Two chocolate worlds. One honest promise.
                 </p>
                 <div class="flex flex-wrap justify-center gap-6">
@@ -166,9 +173,9 @@
         <section class="bg-background-dark border-y border-primary/10 py-24 px-6">
             <div class="mx-auto max-w-5xl">
                 <div class="flex flex-col md:flex-row items-end justify-between gap-8 mb-16">
-                    <div class="max-w-2xl">
-                        <h2 class="font-display text-4xl text-slate-100 mb-6">Where Fruit Meets Cocoa</h2>
-                        <p class="text-lg text-slate-400 leading-relaxed">
+                    <div class="max-w-xl">
+                        <h2 class="font-display text-3xl text-slate-100 mb-4">Where Fruit Meets Cocoa</h2>
+                        <p class="text-base text-slate-400/90 leading-relaxed">
                             Experience the harmony of real fruit and single-origin cocoa. Eight distinct expressions of
                             nature, curated for the discerning palate.
                         </p>
@@ -304,36 +311,33 @@
         <footer class="bg-background-dark border-t border-primary/10 py-16 px-6">
             <div class="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center gap-3 mb-6">
-                        <a href="index.html" class="block h-10">
+                    <div class="flex items-center gap-2 mb-6">
+                        <a href="index.html" class="block h-8">
                             <img src="assets/images/untitled-2.png" alt="Velvet Logo" class="h-full object-contain">
                         </a>
-                        <h2 class="font-display text-xl font-bold tracking-widest text-primary uppercase">Velvet</h2>
+                        <h2 class="font-display text-lg font-bold tracking-[0.2em] text-primary uppercase">Velvet</h2>
                     </div>
-                    <p class="text-sm text-slate-500 max-w-sm mb-8">
+                    <p class="text-xs text-slate-500 max-w-xs mb-8 leading-relaxed">
                         Crafting a new standard in fruit-infused chocolate. Honest ingredients, expertly sourced,
                         respectfully prepared.
                     </p>
                 </div>
                 <div>
-                    <h4 class="text-xs font-bold uppercase tracking-widest text-slate-100 mb-6">Explore</h4>
-                    <ul class="space-y-4 text-sm text-slate-500">
-                        <li><a class="hover:text-primary transition-colors" href="our-collection.html">Our Flavours</a>
-                        </li>
-                        <li><a class="hover:text-primary transition-colors" href="our-collection.html">Collections</a>
-                        </li>
+                    <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-100 mb-6">Explore</h4>
+                    <ul class="space-y-3 text-xs text-slate-500 font-medium">
+                        <li><a class="hover:text-primary transition-colors" href="our-collection.html">Our Flavours</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="our-collection.html">Collections</a></li>
                         <li><a class="hover:text-primary transition-colors" href="our-story.html">Our Story</a></li>
                         <li><a class="hover:text-primary transition-colors" href="contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-xs font-bold uppercase tracking-widest text-slate-100 mb-6">Connect</h4>
-                    <ul class="space-y-4 text-sm text-slate-500">
+                    <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-100 mb-6">Connect</h4>
+                    <ul class="space-y-3 text-xs text-slate-500 font-medium">
                         <li><a class="hover:text-primary transition-colors" href="#">Journal</a></li>
                         <li><a class="hover:text-primary transition-colors" href="#">Instagram</a></li>
                         <li><a class="hover:text-primary transition-colors" href="contact-us.html">Contact Us</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="privacy-policy.html">Privacy
-                                Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -351,6 +355,25 @@
         </footer>
     </div>
     <script>
+        function checkAuth() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            if (isLoggedIn) {
+                document.body.classList.add('is-logged-in');
+                const profileLink = document.getElementById('profileLink');
+                const mobileAccountLink = document.getElementById('mobileAccountLink');
+                if (profileLink) profileLink.href = 'my-account.html';
+                if (mobileAccountLink) mobileAccountLink.href = 'my-account.html';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userEmail');
+            window.location.reload();
+        }
+
+        checkAuth();
+
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
