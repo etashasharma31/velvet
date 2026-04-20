@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-surface: #faf8f6;
+  --color-on-surface: #1c1917;
+  --color-primary: #8b6d3d;
+  --color-primary-container: #d4af37;
+  --color-on-primary: #ffffff;
+  --color-secondary: #57534e;
+  --color-secondary-container: #e7e5e4;
+  --color-surface-container: #f2eee9;
+  --color-surface-container-low: #f9f7f4;
+  --color-surface-container-high: #ebe6df;
+  --color-outline-variant: #d1c5b4;
+  --color-on-surface-variant: #44403c;
+
+  --font-headline: "Noto Serif", serif;
+  --font-brand: "Bodoni Moda", serif;
+  --font-body: "Work Sans", sans-serif;
+  --font-label: "Work Sans", sans-serif;
+}
+
+@layer utilities {
+  .brand-text {
+    font-family: var(--font-brand);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body;
+  }
+}
+
+/* Custom Utilities */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #e9c177 0%, #c59f59 100%);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(to right, #8b6d3d, #d4af37);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-header {
+  background: rgba(250, 248, 246, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(139, 109, 61, 0.1);
+}
+
+.glass-card {
+  background: rgba(250, 248, 246, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 109, 61, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(28, 25, 23, 0.03);
+}
+
+.glass-card-dark {
+  background: rgba(15, 13, 12, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.5);
+}
+
+.glow-gold {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+}
+
+.glow-primary {
+  box-shadow: 0 0 20px rgba(233, 193, 119, 0.15);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.shimmer-gold {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-gold::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
