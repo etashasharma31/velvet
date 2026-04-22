@@ -75,13 +75,13 @@ export const products = [
     title: "Velvet Mango Dark", 
     desc: "60g | Sun-Kissed Mango & 70% Dark Cacao", 
     price: "Revealing Soon", 
-    img: "/products/mango-1.png", 
+    img: "/products/mango1-1.png", 
     images: [
-      "/products/mango-1.png",
-      "/products/mango-2.png",
-      "/products/mango-3.png",
-      "/products/mango-4.png",
-      "/products/mango-5.png"
+      "/products/mango1-1.png",
+      "/products/mango1-2.png",
+      "/products/mango1-3.png",
+      "/products/mango1-4.png",
+      "/products/mango1-5.png"
     ],
     category: 'Fruit-Infused', 
     batch: "Bar 053",
