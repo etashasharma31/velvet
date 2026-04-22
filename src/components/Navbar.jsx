@@ -49,10 +49,10 @@ export default function Navbar() {
               <motion.img 
                 src="/favicon.png" 
                 alt="Velvet Official Logo" 
-                className="w-10 h-10 object-contain drop-shadow-[0_0_8px_rgba(233,193,119,0.3)] group-hover:scale-105 group-hover:drop-shadow-[0_0_12px_rgba(233,193,119,0.5)] transition-all duration-500"
+                className="w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(233,193,119,0.3)] group-hover:scale-105 group-hover:drop-shadow-[0_0_12px_rgba(233,193,119,0.5)] transition-all duration-500"
               />
             </div>
-            <span className={cn("text-2xl brand-text group-hover:opacity-80 transition-all duration-500 text-primary-container drop-shadow-sm")}>
+            <span className={cn("text-lg brand-text group-hover:opacity-80 transition-all duration-500 text-primary-container drop-shadow-sm")}>
               VELVET
             </span>
           </Link>
@@ -64,7 +64,7 @@ export default function Navbar() {
                 key={link.name}
                 to={link.path}
                 className={cn(
-                  "relative group font-headline font-light tracking-wide transition-colors duration-500",
+                  "relative group font-headline font-light tracking-[0.2em] uppercase text-[11px] transition-colors duration-500",
                   location.pathname === link.path
                     ? "text-primary-container font-medium"
                     : isScrolled 

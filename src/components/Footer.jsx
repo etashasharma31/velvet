@@ -20,9 +20,9 @@ export default function Footer() {
             <img 
               src="/favicon.png" 
               alt="Velvet Seal" 
-              className="w-10 h-10 object-contain drop-shadow-[0_0_15px_rgba(233,193,119,0.15)] group-hover:scale-105 transition-all duration-700"
+              className="w-8 h-8 object-contain drop-shadow-[0_0_15px_rgba(233,193,119,0.15)] group-hover:scale-105 transition-all duration-700"
             />
-            <span className="text-xl brand-text text-primary uppercase tracking-[0.2em]">
+            <span className="text-lg brand-text text-primary uppercase tracking-[0.2em]">
               VELVET
             </span>
           </Link>
@@ -34,7 +34,7 @@ export default function Footer() {
             <Link
               key={link.name}
               to={link.path}
-              className="font-label text-xs md:text-sm font-bold tracking-[0.4em] uppercase text-on-surface/40 hover:text-primary transition-colors"
+              className="font-label text-xs font-bold tracking-[0.3em] uppercase text-on-surface/40 hover:text-primary transition-colors"
             >
               {link.name}
             </Link>
@@ -43,10 +43,10 @@ export default function Footer() {
 
         {/* Row 3: Legal & Attribution */}
         <div className="w-full flex flex-col items-center gap-3 pt-6 border-t border-on-surface/5">
-          <p className="font-body text-xs md:text-sm font-bold tracking-[0.3em] uppercase text-on-surface/40 text-center">
+          <p className="font-body text-[10px] font-bold tracking-[0.2em] uppercase text-on-surface/30 text-center">
             © 2026 Velvet and Fruits Company
           </p>
-          <p className="font-body text-xs md:text-sm font-bold tracking-[0.3em] uppercase text-on-surface/40 leading-relaxed text-center">
+          <p className="font-body text-[9px] font-bold tracking-[0.2em] uppercase text-on-surface/30 leading-relaxed text-center">
             Developed & managed exclusively by Etasha Sharma and Surender Kushwaha.
           </p>
         </div>
