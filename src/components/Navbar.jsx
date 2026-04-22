@@ -52,7 +52,7 @@ export default function Navbar() {
                 className="w-10 h-10 object-contain drop-shadow-[0_0_8px_rgba(233,193,119,0.3)] group-hover:scale-105 group-hover:drop-shadow-[0_0_12px_rgba(233,193,119,0.5)] transition-all duration-500"
               />
             </div>
-            <span className="text-2xl brand-text text-primary group-hover:opacity-80 transition-opacity">
+            <span className={cn("text-2xl brand-text group-hover:opacity-80 transition-opacity", isScrolled ? "text-primary" : "text-white")}>
               VELVET
             </span>
           </Link>
@@ -65,7 +65,11 @@ export default function Navbar() {
                 to={link.path}
                 className={cn(
                   "relative group font-headline font-light tracking-wide transition-colors duration-500",
-                  location.pathname === link.path ? "text-primary" : "text-on-surface hover:text-primary"
+                  location.pathname === link.path
+                    ? "text-primary"
+                    : isScrolled
+                      ? "text-on-surface hover:text-primary"
+                      : "text-white/90 hover:text-primary drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]"
                 )}
               >
                 {link.name}
@@ -85,7 +89,7 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-on-surface hover:text-primary transition-colors relative z-[60]"
+              className={cn("md:hidden hover:text-primary transition-colors relative z-[60]", isScrolled ? "text-on-surface" : "text-white")}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
