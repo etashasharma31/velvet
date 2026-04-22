@@ -7,15 +7,14 @@ import { cn } from '../lib/utils';
 import SEO from '../components/SEO';
 
 export default function Collections() {
-  const [activeFilter, setActiveFilter] = useState('VELVET KIWI chocolate');
+  const [activeFilter, setActiveFilter] = useState('Velvet Kiwi Chocolate');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const filters = ['VELVET KIWI chocolate', 'VELVET Pineapple & Raisin', 'VELVET Dark Cranberry', 'VELVET Mango Dark'];
+  const filters = ['Velvet Kiwi Chocolate', 'Velvet Pineapple & Raisin', 'Velvet Dark Cranberry', 'Velvet Mango Dark'];
 
-  const filteredProducts = products.filter(p => {
-    const keyword = activeFilter.split(' ').pop().toLowerCase();
-    return p.title.toLowerCase().includes(keyword);
-  });
+  const filteredProducts = products.filter(p => 
+    p.title.toLowerCase() === activeFilter.toLowerCase()
+  );
 
   // Reset index when filter changes
   useEffect(() => {
