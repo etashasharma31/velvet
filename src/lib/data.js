@@ -51,6 +51,46 @@ export const products = [
     offset: false 
   },
   { 
+    id: 10, 
+    title: "Velvet Dark Cranberry", 
+    desc: "60g | Tart Cranberry & 70% Dark Cacao", 
+    price: "Revealing Soon", 
+    img: "/products/cranberry-1.png", 
+    images: [
+      "/products/cranberry-1.png",
+      "/products/cranberry-2.png",
+      "/products/cranberry-3.png",
+      "/products/cranberry-4.png",
+      "/products/cranberry-5.png"
+    ],
+    category: 'Fruit-Infused', 
+    batch: "Bar 047",
+    description: "A deep, crimson encounter. Tart sun-dried cranberries are enrobed in rich 70% single-origin dark cacao, yielding a bold contrast of bitter and bright. Each bite is a dopamine cascade — layered, vibrant, and unapologetically indulgent.",
+    tastingNotes: "Cranberry, Dark Cacao, Subtle Tang",
+    ingredients: "70% dark cacao, sun-dried cranberries, natural cane sugar",
+    offset: true 
+  },
+  { 
+    id: 11, 
+    title: "Velvet Mango Dark", 
+    desc: "60g | Sun-Kissed Mango & 70% Dark Cacao", 
+    price: "Revealing Soon", 
+    img: "/products/mango-1.png", 
+    images: [
+      "/products/mango-1.png",
+      "/products/mango-2.png",
+      "/products/mango-3.png",
+      "/products/mango-4.png",
+      "/products/mango-5.png"
+    ],
+    category: 'Fruit-Infused', 
+    batch: "Bar 053",
+    description: "A sun-drenched collision of tropics and darkness. Luscious sun-kissed mango pieces meet our signature 70% single-origin dark cacao, creating a vivid interplay of floral sweetness and deep bitter richness. Warmth in every bite.",
+    tastingNotes: "Sun-Kissed Mango, Floral, 70% Dark Cacao",
+    ingredients: "70% dark cacao, sun-dried mango, natural cane sugar",
+    offset: false 
+  },
+  { 
     id: 2, 
     title: "Amazonian Single Origin", 
     desc: "Raw Cacao, Earthy, Smoked Oak", 

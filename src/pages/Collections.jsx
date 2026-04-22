@@ -10,11 +10,12 @@ export default function Collections() {
   const [activeFilter, setActiveFilter] = useState('VELVET KIWI chocolate');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const filters = ['VELVET KIWI chocolate', 'VELVET Pineapple & Raisin'];
+  const filters = ['VELVET KIWI chocolate', 'VELVET Pineapple & Raisin', 'VELVET Dark Cranberry', 'VELVET Mango Dark'];
 
-  const filteredProducts = products.filter(p => 
-    p.title.toLowerCase().includes(activeFilter.split(' ')[1].toLowerCase())
-  );
+  const filteredProducts = products.filter(p => {
+    const keyword = activeFilter.split(' ').pop().toLowerCase();
+    return p.title.toLowerCase().includes(keyword);
+  });
 
   // Reset index when filter changes
   useEffect(() => {
