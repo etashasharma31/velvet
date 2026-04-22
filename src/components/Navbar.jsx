@@ -105,7 +105,7 @@ export default function Navbar() {
             animate={{ opacity: 1, backdropFilter: "blur(24px)" }}
             exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
             transition={{ duration: 0.5 }}
-            className="fixed inset-0 z-40 bg-surface/90 flex flex-col items-center justify-center"
+            className="fixed inset-0 z-40 bg-[#0f0d0c]/95 backdrop-blur-xl flex flex-col items-center justify-center"
           >
             <div className="flex flex-col items-center gap-12">
               {links.map((link, idx) => (
@@ -120,7 +120,7 @@ export default function Navbar() {
                     to={link.path}
                     className={cn(
                       "font-headline text-4xl font-light tracking-widest transition-colors duration-300 block relative group",
-                      location.pathname === link.path ? "text-primary italic" : "text-on-surface hover:text-primary"
+                      location.pathname === link.path ? "text-primary italic" : "text-white/80 hover:text-primary"
                     )}
                   >
                     {link.name}
