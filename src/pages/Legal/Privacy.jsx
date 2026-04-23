@@ -41,19 +41,19 @@ export default function Privacy() {
       title="Privacy Policy"
       seoProps={{
         title: "Privacy Policy | Data & Security",
-        description: "Our commitment to your privacy. Learn how Velvet & Fruits Company handles and protects your personal information with transparency."
+        description: "Our commitment to your privacy. Learn how Fruits Company handles and protects your personal information with transparency."
       }}
     >
-      <p className="font-body text-on-surface-variant italic text-lg text-center opacity-80 border-b border-on-surface/5 pb-12">
-        At Velvet & Fruits Company, we value your privacy and ensure your personal information is protected.
+      <p className="font-body text-on-surface-variant italic text-base text-center opacity-80 border-b border-on-surface/5 pb-8">
+        At Fruits Company, we value your privacy and ensure your personal information is protected.
       </p>
 
-      <div className="space-y-16">
+      <div className="space-y-10">
         {sections.map((section, index) => (
-          <section key={index} className="space-y-6">
-            <h2 className="font-headline text-2xl text-on-surface italic">{section.title}</h2>
-            <div className="space-y-4">
-              <p className="font-body text-on-surface/70 leading-loose">
+          <section key={index} className="space-y-4">
+            <h2 className="font-headline text-xl text-on-surface italic">{section.title}</h2>
+            <div className="space-y-3">
+              <p className="font-body text-on-surface/70 text-sm leading-relaxed">
                 {section.content}
               </p>
               {section.list && (

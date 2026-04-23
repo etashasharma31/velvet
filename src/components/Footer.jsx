@@ -19,12 +19,9 @@ export default function Footer() {
           >
             <img 
               src="/favicon.png" 
-              alt="Velvet Seal" 
+              alt="Seal" 
               className="w-8 h-8 object-contain drop-shadow-[0_0_15px_rgba(233,193,119,0.15)] group-hover:scale-105 transition-all duration-700"
             />
-            <span className="text-lg brand-text text-primary uppercase tracking-[0.2em]">
-              VELVET
-            </span>
           </Link>
         </div>
 
@@ -44,7 +41,7 @@ export default function Footer() {
         {/* Row 3: Legal & Attribution */}
         <div className="w-full flex flex-col items-center gap-3 pt-6 border-t border-on-surface/5">
           <p className="font-body text-[10px] font-bold tracking-[0.2em] uppercase text-on-surface/30 text-center">
-            © 2026 Velvet and Fruits Company
+            © 2026 Fruits Company
           </p>
           <p className="font-body text-[9px] font-bold tracking-[0.2em] uppercase text-on-surface/30 leading-relaxed text-center">
             Developed & managed exclusively by Etasha Sharma and Surender Kushwaha.

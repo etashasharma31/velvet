@@ -8,18 +8,18 @@ const fadeInUp = {
 
 const LegalLayout = ({ title, seoProps, children }) => {
   return (
-    <main className="bg-surface min-h-screen pt-32 md:pt-40 pb-20 md:pb-24 px-6 md:px-8">
+    <main className="bg-surface min-h-screen pt-24 md:pt-32 pb-16 md:pb-20 px-6 md:px-8">
       <SEO {...seoProps} />
-      <div className="max-w-3xl mx-auto space-y-16">
+      <div className="max-w-2xl mx-auto space-y-12">
         <motion.div 
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="text-center space-y-4"
+          className="text-center space-y-3"
         >
-          <span className="font-label text-primary uppercase text-[10px] tracking-[0.5em]">Studio Documents</span>
-          <h1 className="font-headline text-5xl md:text-7xl italic text-on-surface tracking-tight">{title}</h1>
-          <p className="font-body text-primary/60 uppercase text-[10px] tracking-[0.3em]">Velvet & Fruits Company</p>
+          <span className="font-label text-primary uppercase text-[9px] tracking-[0.5em]">Studio Documents</span>
+          <h1 className="font-headline text-3xl md:text-5xl italic text-on-surface tracking-tight">{title}</h1>
+          <p className="font-body text-primary/60 uppercase text-[9px] tracking-[0.3em]">Fruits Company</p>
         </motion.div>
 
         <motion.div 
@@ -27,7 +27,7 @@ const LegalLayout = ({ title, seoProps, children }) => {
           animate="visible"
           variants={fadeInUp}
           transition={{ delay: 0.2 }}
-          className="space-y-12"
+          className="space-y-10"
         >
           {children}
         </motion.div>
